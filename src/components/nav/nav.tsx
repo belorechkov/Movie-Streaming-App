@@ -10,13 +10,8 @@ export default function Nav() {
                         </a>
                     </div>
                     <ul className="navbar-box">
-                        <li className="navbar-item parent" data-active="home">
-                            <a href="index.html">Home</a>
-                            <ul className="dropdown">
-                                <li className="dropdown-item"><a href="index.html">Home one</a></li>
-                                <li className="dropdown-item"><a href="#">Home two</a></li>
-                            </ul>
-                        </li>
+                    <li className="navbar-item" data-active="tv-show"><a href="tv-show.html">Home</a></li>
+
                         <li className="navbar-item parent" data-active="movie">
                             <a href="movie.html">Movies</a>
                             <ul className="dropdown">
@@ -24,7 +19,7 @@ export default function Nav() {
                                 <li className="dropdown-item"><a href="movie-detail.html">Movie details</a></li>
                             </ul>
                         </li>
-                        <li className="navbar-item" data-active="tv-show"><a href="tv-show.html">TV Shows</a></li>
+                        <li className="navbar-item" data-active="tv-show"><a href="tv-show.html">Tv Shows</a></li>
                         <li className="navbar-item" data-active="favorites"><a href="contact.html">Favorites</a></li>
                     </ul>
                     <div className="navbar-action">
@@ -74,7 +69,7 @@ export default function Nav() {
                         </ul>
                     </li>
                     <li className="navbar-body-item parent" data-active="movie">
-                        <a className="fw-5" href="../movie.html">Movie</a>
+                        <a className="fw-5" href="../movie.html">Movies</a>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>
                     </li>
                     <li className="navbar-body-item dropdown">
@@ -84,11 +79,9 @@ export default function Nav() {
                         </ul>
                     </li>
                     <li className="navbar-body-item" data-active="tv-show">
-                        <a className="fw-5" href="../tv-show.html">Tv Show</a>
+                        <a className="fw-5" href="../tv-show.html">Tv Shows</a>
                     </li>
-                    <li className="navbar-body-item" data-active="pricing">
-                        <a className="fw-5" href="../pricing.html">Pricing</a>
-                    </li>
+                    
                     <li className="navbar-body-item parent" data-active="blog">
                         <a className="fw-5" href="../blog.html">Blog</a>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>

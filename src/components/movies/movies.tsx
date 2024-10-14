@@ -46,10 +46,10 @@ export default function Movies() {
             </div>
             <div className="movie-wrapper">
                 <ul className="movie-box grid-layout grid-card">
-                    <li className="movie-item card hoverable">
+                    {/* <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster01.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster01.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -103,7 +103,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster02.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster02.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -157,7 +157,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster03.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -211,7 +211,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster04.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -265,7 +265,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster05.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -319,7 +319,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster06.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -373,7 +373,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster07.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -427,7 +427,7 @@ export default function Movies() {
                     <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
-                                <img src="./assets/images/movies/ucm_poster08.jpg" alt="movie"/>
+                                <img src="./src/assets/images/movies/ucm_poster08.jpg" alt="movie"/>
                             </a>
                             <ul className="hover-box">
                                 <li className="hover-item star-box">
@@ -477,7 +477,7 @@ export default function Movies() {
                                 </div>
                             </div>
                         </div>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <ul className="pagination">

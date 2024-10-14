@@ -6,8 +6,8 @@ export default function Home() {
                 <div className="banner-box">
                     <h3 className="hightlight fw-7">Movflx</h3>
                     <h2 className="title fw-7 text-white">
-                        Unlimited
-                        <span className="hightlight">Movie</span>,
+                        Unlimited 
+                        <span className="hightlight"> Movies</span>,
                         TVs Shows, & More.
                     </h2>
                     {/* <ul className="banner-meta meta">
@@ -212,7 +212,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="download-service">
+            {/* <section id="download-service">
                 <div className="service-box">
                     <div className="service-item service-poster">
                         <img src="./src/assets/images/poster.jpg" alt="poster"/>
@@ -255,7 +255,7 @@ export default function Home() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section id="top-rated">
                 <div className="top-rated-box">
@@ -482,7 +482,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section id="live-movie">
+            {/* <section id="live-movie">
                 <div className="live-movie-box">
                     <div className="content">
                         <div className="heading">
@@ -536,7 +536,7 @@ export default function Home() {
                         <img src="./src/assets/images/live_img.png" alt="live-movie"/>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <section id="best-serie" className="suggestion">
                 <div className="suggestion-box">
@@ -572,7 +572,7 @@ export default function Home() {
                                     </div>
                                 </div>
                             </li>
-                            <li className="movie-item card">
+                            <li className="movie-item card ">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
                                         <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie"/>
