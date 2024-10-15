@@ -11,7 +11,7 @@ function App() {
   return (
     <div>
       <Nav/>
-      {/* <Home/> */}
+      <Home/>
       <Movies/>
       {/* <Search/>
       <ScrollTop/> */}
