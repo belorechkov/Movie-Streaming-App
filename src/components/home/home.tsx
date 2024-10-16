@@ -1,12 +1,15 @@
+import { useEffect, useState } from "react"
+
 export default function Home() {
+
 
     return (
         <div>
             <section id="banner">
                 <div className="banner-box">
-                    <h3 className="hightlight fw-7">Movflx</h3>
+                    <h3 className="hightlight fw-7">Watch</h3>
                     <h2 className="title fw-7 text-white">
-                        Unlimited 
+                        Unlimited
                         <span className="hightlight"> Movies</span>,
                         TVs Shows, & More.
                     </h2>
@@ -66,7 +69,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster01.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster01.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -90,7 +93,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster02.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster02.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -114,7 +117,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -138,7 +141,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -162,7 +165,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -186,7 +189,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -289,7 +292,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster01.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster01.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -313,7 +316,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster02.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster02.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -337,7 +340,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -361,7 +364,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -385,7 +388,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -409,7 +412,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -433,7 +436,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -457,7 +460,7 @@ export default function Home() {
                         <li className="movie-item card">
                             <div className="movie-image image rounded">
                                 <a href="#">
-                                    <img src="./src/assets/images/movies/ucm_poster08.jpg" alt="movie"/>
+                                    <img src="./src/assets/images/movies/ucm_poster08.jpg" alt="movie" />
                                 </a>
                             </div>
                             <div className="movie-meta card-meta">
@@ -551,7 +554,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster08.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster08.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -575,7 +578,7 @@ export default function Home() {
                             <li className="movie-item card ">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster07.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -599,7 +602,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster06.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -623,7 +626,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster05.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -647,7 +650,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster04.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">
@@ -671,7 +674,7 @@ export default function Home() {
                             <li className="movie-item card">
                                 <div className="movie-image image rounded">
                                     <a href="movie-detail.html">
-                                        <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie"/>
+                                        <img src="./src/assets/images/movies/ucm_poster03.jpg" alt="movie" />
                                     </a>
                                 </div>
                                 <div className="movie-meta card-meta">

@@ -2,19 +2,19 @@
 
 import Footer from './components/footer/footer'
 import Home from './components/home/home'
-import Movies from './components/movies/movies'
 import Nav from './components/nav/nav'
-// import ScrollTop from './components/scroll-top/scroll-top'
+// import Movies from './components/movies/movies'
 // import Search from './components/search/search'
+import ScrollTop from './components/scroll-top/scroll-top'
 
 function App() {
   return (
     <div>
+      <ScrollTop/>
       <Nav/>
       <Home/>
-      <Movies/>
-      {/* <Search/>
-      <ScrollTop/> */}
+      {/* <Movies/> */}
+      {/* <Search/> */}
       <Footer/>
     </div>
   )

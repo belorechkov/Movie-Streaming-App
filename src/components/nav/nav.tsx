@@ -1,8 +1,27 @@
+import { useEffect, useState } from "react";
+
 export default function Nav() {
+
+    const [sticky, setSticky] = useState(false)
+
+    const handleNavResponsiveness = () => {
+        if (window.scrollY > 200) {
+            setSticky(true)
+        } else {
+            setSticky(false)
+        }
+    }
+
+    useEffect(() => {
+        window.addEventListener('scroll', handleNavResponsiveness);
+        return () => {
+            window.addEventListener('scroll', handleNavResponsiveness)
+        }
+    });
 
     return (
         <div>
-            <nav id="navbar" className="navbar-top">
+            <nav id="navbar" className={sticky ? 'scroll-down' : ''}>
                 <div className="navbar-inner">
                     <div className="navbar-logo image">
                         <a href="index.html">
