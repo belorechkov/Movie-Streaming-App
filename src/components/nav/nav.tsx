@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function Nav() {
 
@@ -24,31 +25,31 @@ export default function Nav() {
             <nav id="navbar" className={sticky ? 'scroll-down' : ''}>
                 <div className="navbar-inner">
                     <div className="navbar-logo image">
-                        <a href="index.html">
+                        <Link to='/'>
                             <img src="./src/assets/images/logo.png" alt="Movflx" />
-                        </a>
+                        </Link>
                     </div>
                     <ul className="navbar-box">
-                    <li className="navbar-item" data-active="tv-show"><a href="tv-show.html">Home</a></li>
+                    <li className="navbar-item" data-active="tv-show"><Link to="/">Home</Link></li>
 
                         <li className="navbar-item parent" data-active="movie">
-                            <a href="movie.html">Movies</a>
+                            <Link to="/movies">Movies</Link>
                             <ul className="dropdown">
-                                <li className="dropdown-item"><a href="movie.html">Movie</a></li>
-                                <li className="dropdown-item"><a href="movie-detail.html">Movie details</a></li>
+                                <li className="dropdown-item"><Link to="movie.html">Movie</Link></li>
+                                <li className="dropdown-item"><Link to="movie-detail.html">Movie details</Link></li>
                             </ul>
                         </li>
-                        <li className="navbar-item" data-active="tv-show"><a href="tv-show.html">Tv Shows</a></li>
-                        <li className="navbar-item" data-active="favorites"><a href="contact.html">Favorites</a></li>
+                        <li className="navbar-item" data-active="tv-show"><Link to="/shows">Tv Shows</Link></li>
+                        <li className="navbar-item" data-active="favorites"><Link to="contact.html">Favorites</Link></li>
                     </ul>
                     <div className="navbar-action">
                         <div className="search-btn">
-                            <a href="#"><i className="fa fa-search"></i></a>
+                            <Link to="#"><i className="fa fa-search"></i></Link>
                         </div>
                         <div className="language-btn">
-                            <a href="#"><i className="fa fa-globe"></i></a>
+                            <Link to="#"><i className="fa fa-globe"></i></Link>
                             <select name="language" id="language" title="Select language">
-                                <option value="en" selected>en</option>
+                                <option value="en" >en</option>
                                 <option value="bg">bg</option>
                                 <option value="bg">ro</option>
                                 <option value="ro">gr</option>
@@ -58,9 +59,9 @@ export default function Nav() {
                                 <option value="tu">al</option>
                             </select>
                         </div>
-                        <a href="#" className="btn rounded outline bg-dark medium fw-7 space signin-btn">
+                        <Link to="#" className="btn rounded outline bg-dark medium fw-7 space signin-btn">
                             Sign In
-                        </a>
+                        </Link>
                     </div>
                     <div className="navbar-menu">
                         <i className="fa fa-bars"></i>
@@ -70,58 +71,56 @@ export default function Nav() {
 
             <aside id="navbar-mobile">
                 <div className="navbar-header">
-                    <a href="../index.html" className="logo">
+                    <Link to="/" className="logo">
                         <img src="./src/assets/images/logo.png" alt="Movflx" />
-                    </a>
+                    </Link>
                     <div className="close-btn"><i className="fa fa-times"></i></div>
                 </div>
                 <ul className="navbar-body">
                     <li className="navbar-body-item parent" data-active="home">
-                        <a className="fw-5" href="../index.html">Home</a>
+                        <Link className="fw-5" to="/">Home</Link>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>
                     </li>
                     <li className="navbar-body-item dropdown">
                         <ul className="dropdown-box">
-                            <li className="dropdown-item mobile" data-active-child="home home-one"><a className="fw-5" href="../index.html">Home
-                                One</a></li>
-                            <li className="dropdown-item mobile" data-active-child="home home-two"><a className="fw-5" href="#">Home Two</a></li>
+                            <li className="dropdown-item mobile" data-active-child="home home-one"><Link className="fw-5" to="/">Home</Link></li>
                         </ul>
                     </li>
                     <li className="navbar-body-item parent" data-active="movie">
-                        <a className="fw-5" href="../movie.html">Movies</a>
+                        <Link className="fw-5" to="/movies">Movies</Link>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>
                     </li>
                     <li className="navbar-body-item dropdown">
                         <ul className="dropdown-box">
-                            <li className="dropdown-item mobile" data-active-child="movie movie"><a className="fw-5" href="../movie.html">Movie</a></li>
-                            <li className="dropdown-item mobile" data-active-child="movie movie-detail"><a className="fw-5" href="../movie-detail.html">Movie Details</a></li>
+                            <li className="dropdown-item mobile" data-active-child="movie movie"><Link className="fw-5" to="/movies">Movie</Link></li>
+                            <li className="dropdown-item mobile" data-active-child="movie movie-detail"><Link className="fw-5" to="/">Movie Details</Link></li>
                         </ul>
                     </li>
                     <li className="navbar-body-item" data-active="tv-show">
-                        <a className="fw-5" href="../tv-show.html">Tv Shows</a>
+                        <Link className="fw-5" to="/shows">Tv Shows</Link>
                     </li>
                     
                     <li className="navbar-body-item parent" data-active="blog">
-                        <a className="fw-5" href="../blog.html">Blog</a>
+                        <Link className="fw-5" to="s/">Blog</Link>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>
                     </li>
                     <li className="navbar-body-item dropdown">
                         <ul className="dropdown-box">
-                            <li className="dropdown-item mobile" data-active-child="blog blog"><a className="fw-5" href="../blog.html">Our Blog</a></li>
-                            <li className="dropdown-item mobile" data-active-child="blog blog-detail"><a className="fw-5" href="../blog-detail.html">Blog Details</a></li>
+                            <li className="dropdown-item mobile" data-active-child="blog blog"><Link className="fw-5" to="/">Our Blog</Link></li>
+                            <li className="dropdown-item mobile" data-active-child="blog blog-detail"><Link className="fw-5" to="/">Blog Details</Link></li>
                         </ul>
                     </li>
                     <li className="navbar-body-item" data-active="contact">
-                        <a className="fw-5" href="../contact.html">Contacts</a>
+                        <Link className="fw-5" to="../contact.html">Contacts</Link>
                     </li>
                     <li className="navbar-body-item parent" data-active="account">
-                        <a className="fw-5" href="#">Account</a>
+                        <Link className="fw-5" to="/">Account</Link>
                         <div className="dropdown-btn"><i className="fa fa-angle-down"></i></div>
                     </li>
                     <li className="navbar-body-item dropdown">
                         <ul className="dropdown-box">
-                            <li className="dropdown-item"><a className="fw-5" href="#">Sign in</a></li>
-                            <li className="dropdown-item"><a className="fw-5" href="#">Register</a></li>
+                            <li className="dropdown-item"><Link className="fw-5" to="/">Sign in</Link></li>
+                            <li className="dropdown-item"><Link className="fw-5" to="/">Register</Link></li>
                         </ul>
                     </li>
                     <li className="navbar-body-item parent">
@@ -130,17 +129,17 @@ export default function Nav() {
                     </li>
                     <li className="navbar-body-item dropdown">
                         <ul className="dropdown-box">
-                            <li className="dropdown-item"><a className="fw-5" href="#">Search movie</a></li>
-                            <li className="dropdown-item"><a className="fw-5" href="#">Change language</a></li>
+                            <li className="dropdown-item"><Link className="fw-5" to="/">Search movie</Link></li>
+                            <li className="dropdown-item"><Link className="fw-5" to="/">Change language</Link></li>
                         </ul>
                     </li>
                 </ul>
                 <ul className="navbar-footer">
-                    <li className="navbar-footer-item"><a href="#"><i className="fa fa-twitter"></i></a></li>
-                    <li className="navbar-footer-item"><a href="#"><i className="fa fa-facebook"></i></a></li>
-                    <li className="navbar-footer-item"><a href="#"><i className="fa fa-pinterest-p"></i></a></li>
-                    <li className="navbar-footer-item"><a href="#"><i className="fa fa-instagram"></i></a></li>
-                    <li className="navbar-footer-item"><a href="#"><i className="fa fa-youtube-play"></i></a></li>
+                    <li className="navbar-footer-item"><Link to="/"><i className="fa fa-twitter"></i></Link></li>
+                    <li className="navbar-footer-item"><Link to="/"><i className="fa fa-facebook"></i></Link></li>
+                    <li className="navbar-footer-item"><Link to="/"><i className="fa fa-pinterest-p"></i></Link></li>
+                    <li className="navbar-footer-item"><Link to="/"><i className="fa fa-instagram"></i></Link></li>
+                    <li className="navbar-footer-item"><Link to="/"><i className="fa fa-youtube-play"></i></Link></li>
                 </ul>
             </aside>
 

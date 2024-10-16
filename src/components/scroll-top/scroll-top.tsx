@@ -5,7 +5,7 @@ export default function ScrollTop() {
 const [show, setShow] = useState(false)
 
 const handleScrollResponsiveness = () => {
-    if (window.scrollY > 1500) {
+    if (window.scrollY > 1000) {
         setShow(true)
     } else {
         setShow(false)
