@@ -40,7 +40,7 @@ export default function Nav() {
                             </ul>
                         </li>
                         <li className="navbar-item" data-active="tv-show"><Link to="/shows">Tv Shows</Link></li>
-                        <li className="navbar-item" data-active="favorites"><Link to="contact.html">Favorites</Link></li>
+                        <li className="navbar-item" data-active="favorites"><Link to="/saved">Saved</Link></li>
                     </ul>
                     <div className="navbar-action">
                         <div className="search-btn">

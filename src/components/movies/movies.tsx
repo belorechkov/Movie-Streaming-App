@@ -1,17 +1,19 @@
+import { Link } from "react-router-dom";
+
 export default function Movies() {
 
     return (
         <div>
             <section id="breadcrumb">
         <h2 className="title fw-7">
-            Our <span className="hightlight">Movie</span>
+            Our <span className="hightlight">Movies</span>
         </h2>
         <ul className="breadcumb-box">
             <li className="breadcumb-item">
-                <a href="index.html" className="fw-6">Home</a>
+                <Link to="/" className="fw-6">Home</Link>
             </li>
             <li className="breadcumb-item disable">
-                <a href="#" className="fw-6">Movie</a>
+                <Link to="/movies" className="fw-6">Movie</Link>
             </li>
         </ul>
     </section>
