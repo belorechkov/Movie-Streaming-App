@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Nav() {
+export default function Nav({setShowSearch}) {
 
     const [sticky, setSticky] = useState(false)
 
@@ -19,6 +19,11 @@ export default function Nav() {
             window.addEventListener('scroll', handleNavResponsiveness)
         }
     });
+
+    const handleShowSearch = () => {
+        setShowSearch(true)
+        
+    }
 
     return (
         <div>
@@ -44,7 +49,7 @@ export default function Nav() {
                     </ul>
                     <div className="navbar-action">
                         <div className="search-btn">
-                            <Link to="#"><i className="fa fa-search"></i></Link>
+                            <a onClick={handleShowSearch}><i className="fa fa-search"></i></a>
                         </div>
                         <div className="language-btn">
                             <Link to="#"><i className="fa fa-globe"></i></Link>
