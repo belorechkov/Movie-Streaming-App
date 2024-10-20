@@ -1883,7 +1883,7 @@ p.desc.dark {
   align-items: center;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 400px) {
   #navbar .navbar-inner .navbar-action {
     display: none;
   }
@@ -4552,6 +4552,7 @@ p.desc.dark {
   display: block;
   opacity: 1;
   z-index: 9999;
+
 }
 
 #search form.search-box {
