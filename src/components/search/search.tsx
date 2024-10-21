@@ -1,10 +1,12 @@
 import { MouseEvent } from "react";
 
-export default function Search({ showSearch, setShowSearch }: { showSearch: any, setShowSearch: any }) {
+export default function Search({ showSearch, setShowSearch }: { showSearch: unknown; setShowSearch: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     const hideShowSearch = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
-        if (e.target.id !== 'search') {
-            setShowSearch(false)
+        if ((e.target as HTMLInputElement).id === 'search') {
+            console.log('search');
+
+            setShowSearch(prevState => !prevState)
         }
     }
 

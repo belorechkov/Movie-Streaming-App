@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-export default function Nav({setShowSearch} : {setShowSearch:any}) {
+export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<React.SetStateAction<boolean>> }) {
 
     const [sticky, setSticky] = useState(false)
     const [mobile, setMobile] = useState(false)
@@ -22,8 +22,8 @@ export default function Nav({setShowSearch} : {setShowSearch:any}) {
     });
 
     const handleShowSearch = () => {
-        setShowSearch(true)
-        
+        setShowSearch(prevState => !prevState)
+
     }
 
     const toggleMobileMenu = () => {
@@ -40,7 +40,7 @@ export default function Nav({setShowSearch} : {setShowSearch:any}) {
                         </Link>
                     </div>
                     <ul className="navbar-box">
-                    <li className="navbar-item" data-active="tv-show"><Link to="/">Home</Link></li>
+                        <li className="navbar-item" data-active="tv-show"><Link to="/">Home</Link></li>
 
                         <li className="navbar-item parent" data-active="movie">
                             <Link to="/movies">Movies</Link>
@@ -86,7 +86,7 @@ export default function Nav({setShowSearch} : {setShowSearch:any}) {
                     </Link>
                     <div className="close-btn" onClick={toggleMobileMenu}><i className="fa fa-times"></i></div>
                 </div>
-                <ul className="navbar-body">
+                <ul className="navbar-body" onClick={toggleMobileMenu}>
                     <li className="navbar-body-item parent" data-active="home">
                         <Link className="fw-5" to="/">Home</Link>
                     </li>
@@ -96,7 +96,7 @@ export default function Nav({setShowSearch} : {setShowSearch:any}) {
                     <li className="navbar-body-item" data-active="tv-show">
                         <Link className="fw-5" to="/shows">Tv Shows</Link>
                     </li>
-                    
+
                     <li className="navbar-body-item parent" data-active="saved">
                         <Link className="fw-5" to="/saved">Saved</Link>
                     </li>
@@ -130,6 +130,6 @@ export default function Nav({setShowSearch} : {setShowSearch:any}) {
                 </ul> */}
             </aside>
 
-            <div className="overlay"></div></div>
+            <div className="overlay" onClick={toggleMobileMenu}></div></div>
     );
 }
