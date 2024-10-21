@@ -8,11 +8,11 @@ import Search from './components/search/search'
 import Movies from './components/movies/movies'
 import Shows from './components/shows/shows'
 import Footer from './components/footer/footer'
-import { useState } from 'react'
+import React from 'react'
 
 function App() {
-  const [showSearch, setShowSearch] = useState(false)
-  
+  const [showSearch, setShowSearch] = React.useState(false as boolean)
+
 
   return (
     <div>
