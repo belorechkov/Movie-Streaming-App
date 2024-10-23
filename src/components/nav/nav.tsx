@@ -58,8 +58,8 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                         </div>
                         <div className="language-btn">
                             <Link to="#"><i className="fa fa-globe"></i></Link>
-                            <select name="language" id="language" title="Select language">
-                                <option value="en" >en</option>
+                            <select name="language" id="language" title="Select language" defaultValue={'en'}>
+                                <option value="en">en</option>
                                 <option value="bg">bg</option>
                                 <option value="bg">ro</option>
                                 <option value="ro">gr</option>

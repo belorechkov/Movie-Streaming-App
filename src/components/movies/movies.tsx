@@ -1,7 +1,8 @@
-import { FunctionComponent } from "react";
 import { Link } from "react-router-dom";
+import MovieCard from "../movie-card/movie-card";
 
-export default function Movies({ MovieCard }: { MovieCard: FunctionComponent }) {
+
+export default function Movies() {
 
     return (
         <div>
@@ -38,8 +39,8 @@ export default function Movies({ MovieCard }: { MovieCard: FunctionComponent }) 
                             </li>
                             <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
-                                    className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase">
-                                    <option value="english" selected>English</option>
+                                    className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>
+                                    <option value="english">English</option>
                                     <option value="english">Blueray</option>
                                     <option value="english">4k movie</option>
                                     <option value="english">Hd movie</option>
