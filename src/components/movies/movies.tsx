@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import MovieCard from "../movie-card/movie-card";
+import Trending from "../trending/trending";
 
 
 export default function Movies() {
@@ -48,9 +49,10 @@ export default function Movies() {
                             </li>
                         </ul>
                     </div>
+                    <Trending />
                     <div className="movie-wrapper">
                         <ul className="movie-box grid-layout grid-card">
-                            <MovieCard />
+                            {/* <MovieCard /> */}
                             {/* <li className="movie-item card hoverable">
                         <div className="movie-image image rounded">
                             <a href="movie-detail.html">
