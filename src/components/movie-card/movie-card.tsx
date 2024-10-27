@@ -1,4 +1,4 @@
-import StarRating from "./starRating/starRating";
+// import StarRating from "./starRating/starRating";
 
 export default function MovieCard({
     // id,
@@ -36,28 +36,12 @@ export default function MovieCard({
                     />
                 </a>
                 <ul className="hover-box">
-                    {/* <StarRating rating={vote_average} /> */}
-
                     <li className="hover-item star-box " >
                         <span className="star rated rating-box" >
+                            {/* <StarRating rating={vote_average} /> */}
                             <i className="fa fa-star rating-font-small"></i>
-                            <p className="star rating-font">{rating}</p>
+                            <p className="star rating-font-small">{rating}</p>
                         </span>
-                        {/* <span className="star rated">
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span className="star rated">
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span className="star rated">
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span className="star rated">
-                            <i className="fa fa-star"></i>
-                        </span>
-                        <span className="star">
-                            <i className="fa fa-star"></i>
-                        </span> */}
                     </li>
                     <li className="hover-item">
                         <a

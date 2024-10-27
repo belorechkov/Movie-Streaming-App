@@ -1084,15 +1084,17 @@ p.desc.dark {
 
 .rating-font {
   font-size: 2em;
-  margin-left: 0.1em;
+  margin-left: 0.2em;
 }
 
 .rating-font-small {
-  font-size: 1.5em;
+  font-size: 1em;
+  margin-left: 0.2em;
+
 }
 
 .star-box .star {
-  color: #cdcaca;
+  color: #ffffff;
 }
 
 .star-box .rated {
