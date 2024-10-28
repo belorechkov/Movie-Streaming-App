@@ -1078,18 +1078,18 @@ p.desc.dark {
 }
 
 .rating-icon {
-  font-size: 3em;
-  margin-left: 0.1em;
+  font-size: 3rem;
+  margin-left: 0.1rem;
 }
 
 .rating-font {
-  font-size: 2em;
-  margin-left: 0.2em;
+  font-size: 2rem;
+  margin-left: 0.2rem;
 }
 
 .rating-font-small {
-  font-size: 1em;
-  margin-left: 0.2em;
+  font-size: 1.2rem;
+  margin-left: 0.2rem;
 
 }
 
@@ -1122,7 +1122,7 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 576px) and (max-width: 767px) {
+@media (min-width: 575px) and (max-width: 767px) {
   .grid-card .card {
     max-width: calc(50% - 15px);
   }
@@ -1134,15 +1134,21 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 992px) and (max-width: 1199px) {
+  .grid-card .card {
+    max-width: calc(50% - 15px);
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
   .grid-card .card {
     max-width: calc(33.3333333333% - 20px);
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1600px) {
   .grid-card .card {
-    max-width: calc(25% - 22.5px);
+    max-width: calc(20% - 25px);
   }
 }
 
@@ -1255,17 +1261,17 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .suggestion .suggestion-box {
-    width: 960px;
+    width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1600px) {
   .suggestion .suggestion-box {
-    width: 1330px;
+    width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -1340,7 +1346,7 @@ p.desc.dark {
   column-gap: 30px;
 }
 
-@media (max-width: 991px) {
+@media (max-width: 1600px) {
   .suggestion .suggestion-box .control.heading {
     justify-content: center;
   }
@@ -1394,13 +1400,13 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .suggestion .suggestion-box .movie-wrapper .movie-box:not(.grid-layout) .movie-item {
     min-width: calc(33.3333333333% - 20px);
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1600px) {
   .suggestion .suggestion-box .movie-wrapper .movie-box:not(.grid-layout) .movie-item {
     min-width: calc(25% - 22.5px);
   }
@@ -1759,7 +1765,7 @@ p.desc.dark {
   align-items: center;
 }
 
-@media (max-width: 575px) {
+@media (max-width: 576px) {
   #navbar .navbar-inner {
     width: 100%;
     margin: 0 auto;
@@ -1783,7 +1789,7 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   #navbar .navbar-inner {
     width: 960px;
     margin: 0 auto;
@@ -1791,9 +1797,17 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   #navbar .navbar-inner {
-    width: 1330px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #navbar .navbar-inner {
+    width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -4280,7 +4294,7 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   #footer .footer-box {
     width: 960px;
     margin: 0 auto;
@@ -4288,9 +4302,17 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   #footer .footer-box {
-    width: 1330px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #footer .footer-box {
+    width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
   }
@@ -4522,7 +4544,7 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 992px) and (max-width: 1219px) {
+@media (min-width: 992px) and (max-width: 1199px) {
   .footer-copyright-box {
     width: 960px;
     margin: 0 auto;
@@ -4530,9 +4552,17 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 1220px) {
+@media (min-width: 1200px) and (max-width: 1599px) {
   .footer-copyright-box {
-    width: 1330px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1600px) {
+  .footer-copyright-box {
+    width: 1600px;
     margin: 0 auto;
     padding: 0 15px;
   }

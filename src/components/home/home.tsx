@@ -1,3 +1,4 @@
+import Trending from "../trending/trending";
 
 export default function Home() {
 
@@ -37,6 +38,7 @@ export default function Home() {
                     </a>
                 </div>
             </section>
+            <Trending />
 
             <section id="coming-movie" className="suggestion">
                 <div className="suggestion-box">
