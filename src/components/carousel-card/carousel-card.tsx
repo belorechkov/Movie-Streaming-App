@@ -26,7 +26,7 @@ export default function CarouselCard({
 
     return (
 
-        <div className="movie-item card hoverable">
+        <div className="grid-card">
             <div className="movie-image image rounded">
                 <a href="movie-detail.html">
                     <img

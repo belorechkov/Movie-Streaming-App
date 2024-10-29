@@ -1122,13 +1122,7 @@ p.desc.dark {
   }
 }
 
-@media (min-width: 575px) and (max-width: 767px) {
-  .grid-card .card {
-    max-width: calc(50% - 15px);
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 575px) and (max-width: 991px) {
   .grid-card .card {
     max-width: calc(50% - 15px);
   }
@@ -1136,13 +1130,13 @@ p.desc.dark {
 
 @media (min-width: 992px) and (max-width: 1199px) {
   .grid-card .card {
-    max-width: calc(50% - 15px);
+    max-width: calc(33.3333333333% - 25px);
   }
 }
 
 @media (min-width: 1200px) and (max-width: 1599px) {
   .grid-card .card {
-    max-width: calc(33.3333333333% - 20px);
+    max-width: calc(25% - 25px);
   }
 }
 
@@ -4687,6 +4681,50 @@ p.desc.dark {
 #to-top-btn:hover button {
   background-color: #0b1110;
   color: #fff;
+}
+
+/* .slick-slide {
+  margin-right: 30px;
+} */
+
+.slick-slide>div {
+  padding: 0 15px;
+}
+
+@media (max-width: 575px) {
+  .slick-slide {
+    max-width: 504px
+  }
+}
+
+@media (min-width: 575px) and (max-width: 700px) {
+  .slick-slide {
+    max-width: 240px
+  }
+}
+
+@media (min-width: 700px) and (max-width: 991px) {
+  .slick-slide {
+    max-width: 330px
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .slick-slide {
+    max-width: 330px
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  .slick-slide {
+    max-width: 267.5px
+  }
+}
+
+@media (min-width: 1600px) {
+  .slick-slide {
+    max-width: 319px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

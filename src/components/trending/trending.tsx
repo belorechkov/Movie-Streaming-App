@@ -11,21 +11,53 @@ const settings = {
     dots: true,
     infinite: false,
     speed: 500,
-    slidesToShow: 5,
     swipeToSlide: true,
-    focusOnSelect: true,
+    // slidesToShow: 5,
+    // focusOnSelect: true,
+
+    responsive: [
+        {
+            breakpoint: 1600,
+            settings: {
+                slidesToShow: 1,
+                slidesToScroll: 3,
+                infinite: true,
+                dots: true,
+                arrows: false,
+            },
+        },
+        // {
+        //     breakpoint: 600,
+        //     settings: {
+        //         slidesToShow: 2,
+        //         slidesToScroll: 2,
+        //         initialSlide: 2,
+        //         arrows: false,
+        //         centerPadding: "50px", // Add this line to reduce centerPadding for smaller screens
+        //     },
+        // },
+        // {
+        //     breakpoint: 480,
+        //     settings: {
+        //         slidesToShow: 1,
+        //         slidesToScroll: 1,
+        //         arrows: false,
+        //         centerPadding: "0px", // Add this line to remove centerPadding for smallest screens
+        //     },
+        // },
+    ],
 };
 
 const queryClient = new QueryClient()
 
-type Show = {
-    backdrop_path: string,
-    id: number
-    title: string
-    overview: string
-    poster_path: string
-    media_type: string
-}
+// type Show = {
+//     backdrop_path: string,
+//     id: number
+//     title: string
+//     overview: string
+//     poster_path: string
+//     media_type: string
+// }
 
 export default function Trending() {
     return (
@@ -95,17 +127,20 @@ function GetTrending() {
                             ))}
                         </ul>
                     </div>
-                    <Slider {...settings}>
-                        {data.results.map((show: {
-                            id: number,
-                            title: string,
-                            overview: string
-                        }) => (
-                            <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
+                    <div className="slick-track grid-card">
+                        <Slider {...settings}>
+                            {data.results.map((show: {
+                                id: number,
+                                title: string,
+                                overview: string
+                            }) => (
+                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
 
-                        ))}
-                    </Slider>
+                            ))}
+                        </Slider>
+                    </div>
                 </div>
+
             </section>
         </div>
     )
