@@ -26,7 +26,85 @@ export default function CarouselCard({
 
     return (
 
-        <div className="grid-card">
+        // new classes
+
+        // <div className="carousel-card">
+        //     <div className="movie-image image rounded">
+        //         <a href="movie-detail.html">
+        //             <img
+        //                 src={"https://image.tmdb.org/t/p/original//" + poster_path}
+        //                 alt="movie"
+        //             />
+        //         </a>
+        //         <ul className="carousel-hover-box">
+        //             <li className="hover-item star-box " >
+        //                 <span className="star rated rating-box" >
+        //                     <i className="fa fa-star rating-font-small"></i>
+        //                     <p className="star rating-font-small">{rating}</p>
+        //                 </span>
+        //             </li>
+        //             <li className="hover-item">
+        //                 <a href="https://www.youtube.com/embed/R2gbPxeNk2E"
+        //                     className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source"
+        //                 > Watch now
+        //                 </a>
+        //             </li>
+        //             <li className="hover-item">
+        //                 <a href="movie-detail.html" className="btn rounded outline fw-6 medium bg-dark">
+        //                     Details
+        //                 </a>
+        //             </li>
+        //         </ul>
+        //     </div>
+        //     <div className="carousel-card-details">
+        //         <div>
+        //             <a href="movie-detail.html" className="carousel-card-title">
+        //                 {title ? title : name}
+        //             </a>
+        //             <span className="carousel-card-year">{year}</span>
+        //         </div>
+        //     </div>
+        // </div>
+
+        // <div className="grid-card">
+        //     <div className="movie-image image rounded">
+        //         <a href="movie-detail.html">
+        //             <img
+        //                 src={"https://image.tmdb.org/t/p/original//" + poster_path}
+        //                 alt="movie"
+        //             />
+        //         </a>
+        //         <ul className="hover-box">
+        //             <li className="hover-item star-box " >
+        //                 <span className="star rated rating-box" >
+        //                     <i className="fa fa-star rating-font-small"></i>
+        //                     <p className="star rating-font-small">{rating}</p>
+        //                 </span>
+        //             </li>
+        //             <li className="hover-item">
+        //                 <a href="https://www.youtube.com/embed/R2gbPxeNk2E"
+        //                     className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source"
+        //                 > Watch now
+        //                 </a>
+        //             </li>
+        //             <li className="hover-item">
+        //                 <a href="movie-detail.html" className="btn rounded outline fw-6 medium bg-dark">
+        //                     Details
+        //                 </a>
+        //             </li>
+        //         </ul>
+        //     </div>
+        //     <div className="carousel-card-details">
+        //         <div className="meta">
+        //             <a href="movie-detail.html" className="meta-title">
+        //                 {title ? title : name}
+        //             </a>
+        //             <span className="meta-text accent">{year}</span>
+        //         </div>
+        //     </div>
+        // </div>
+
+        <li className="movie-item card hoverable" style={{ maxWidth: "100%" }}>
             <div className="movie-image image rounded">
                 <a href="movie-detail.html">
                     <img
@@ -37,14 +115,17 @@ export default function CarouselCard({
                 <ul className="hover-box">
                     <li className="hover-item star-box " >
                         <span className="star rated rating-box" >
+                            {/* <StarRating rating={vote_average} /> */}
                             <i className="fa fa-star rating-font-small"></i>
                             <p className="star rating-font-small">{rating}</p>
                         </span>
                     </li>
                     <li className="hover-item">
-                        <a href="https://www.youtube.com/embed/R2gbPxeNk2E"
+                        <a
+                            href="https://www.youtube.com/embed/R2gbPxeNk2E"
                             className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source"
-                        > Watch now
+                        >
+                            Watch now
                         </a>
                     </li>
                     <li className="hover-item">
@@ -61,7 +142,18 @@ export default function CarouselCard({
                     </a>
                     <span className="meta-text accent">{year}</span>
                 </div>
+                <div className="meta">
+                    {/* <div className="meta-outline accent">4k</div>
+                    <div className="meta-icon small">
+                        <i className="fa fa-clock-o"></i>
+                        128 min
+                    </div> */}
+                    {/* <div className="meta-icon small">
+                        <i className="fa fa-thumbs-up"></i>
+                        {vote_average}
+                    </div> */}
+                </div>
             </div>
-        </div>
+        </li>
     );
 }

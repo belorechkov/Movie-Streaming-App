@@ -8,21 +8,51 @@ import MovieCard from "../movie-card/movie-card"
 import CarouselCard from "../carousel-card/carousel-card";
 
 const settings = {
-    dots: true,
-    infinite: false,
+    dots: false,
+    arrows: false,
+    infinite: true,
     speed: 500,
     swipeToSlide: true,
-    // slidesToShow: 5,
-    // focusOnSelect: true,
-
+    slidesToShow: 5,
+    slidesToScroll: 1,
     responsive: [
         {
             breakpoint: 1600,
             settings: {
-                slidesToShow: 1,
-                slidesToScroll: 3,
+                slidesToShow: 4,
+                // slidesToScroll: 2,
                 infinite: true,
                 dots: true,
+                arrows: false,
+            },
+        },
+        {
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 3,
+                // slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows: false,
+            },
+        },
+        {
+            breakpoint: 992,
+            settings: {
+                slidesToShow: 2,
+                // slidesToScroll: 1,
+                infinite: true,
+                dots: false,
+                arrows: false,
+            },
+        },
+        {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 1,
+                // slidesToScroll: 1,
+                infinite: true,
+                dots: false,
                 arrows: false,
             },
         },
@@ -75,7 +105,7 @@ function GetTrending() {
             Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhNDlhM2FkYmNiYjA3YWI2Y2M4NjVhOTc1MWY3NWZhNyIsIm5iZiI6MTcyOTY5OTcxMC43NjM3MjYsInN1YiI6IjY3MGQxYTk3OWYzNTMxZTZiMjZiZTIzNSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.53-1Zsz27wZ-hYeCWTXCByILOoide6JJI73JPLqZVJM'
         }
     };
-    const { isPending, error, data, isFetching } = useQuery({
+    const { isPending, error, data, } = useQuery({
         queryKey: ['trending'],
         queryFn: async () => {
             const response = await fetch(
@@ -127,7 +157,7 @@ function GetTrending() {
                             ))}
                         </ul>
                     </div>
-                    <div className="slick-track grid-card">
+                    <div className="slick-track grid-card carousel">
                         <Slider {...settings}>
                             {data.results.map((show: {
                                 id: number,
@@ -276,3 +306,11 @@ function GetTrending() {
 //         </div>
 //     )
 // }
+
+
+
+
+
+// Implement the carousel into it's own component
+// finalize the Trending component
+// Crete Popular Movies and Popular TV Shows Components
