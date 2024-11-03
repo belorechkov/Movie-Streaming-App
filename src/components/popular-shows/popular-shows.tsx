@@ -19,7 +19,7 @@ const queryClient = new QueryClient();
 //     media_type: string
 // }
 
-export default function Trending() {
+export default function PopularShows() {
     return (
         <QueryClientProvider client={queryClient}>
             <GetTrending />
@@ -38,7 +38,7 @@ function GetTrending() {
     const { isPending, error, data } = useQuery({
         queryKey: ["trending"],
         queryFn: async () => {
-            const response = await fetch("https://api.themoviedb.org/3/trending/all/week?language=en-US", options);
+            const response = await fetch("https://api.themoviedb.org/3/tv/popular?language=en-US&page=1", options);
             return await response.json();
         },
     });
@@ -55,7 +55,7 @@ function GetTrending() {
                         <p className="sub-title hightlight">Online streaming</p>
                     </div>
                     <div className="heading control">
-                        <h3 className="title center">Trending This Week</h3>
+                        <h3 className="title center">Popular TV Shows</h3>
                         <ul className="control-action">
                             {/* <li className="action-item control">
                                 <div className="double-btn btn rounded fw-6 outline-dark small bg-dark lowercase">

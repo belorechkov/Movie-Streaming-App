@@ -1222,7 +1222,7 @@ p.desc.dark {
 
 .suggestion {
   position: relative;
-  padding: 120px 0 70px;
+  padding: 60px 0 30px;
 }
 
 .suggestion .suggestion-box {
@@ -2534,7 +2534,7 @@ p.desc.dark {
   background-position: center bottom, center;
   background-repeat: repeat, repeat;
   background-size: contain, cover;
-  padding: 120px 0 120px !important;
+  /* padding: 120px 0 120px !important; */
 }
 
 #blog {
