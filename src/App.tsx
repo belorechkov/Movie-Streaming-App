@@ -9,6 +9,7 @@ import Movies from './components/movies/movies'
 import Shows from './components/shows/shows'
 import Footer from './components/footer/footer'
 import React from 'react'
+import Details from './components/details/details'
 
 function App() {
   const [showSearch, setShowSearch] = React.useState(false as boolean)
@@ -25,6 +26,7 @@ function App() {
           <Route path='/' element={<Home />} />
           <Route path='/movies' element={<Movies />} />
           <Route path='/shows' element={<Shows />} />
+          <Route path='/details' element={<Details />} />
         </Routes>
         <Footer />
       </BrowserRouter>
@@ -37,7 +39,7 @@ export default App
 // TODO: Implement Movies page
 // TODO: Implement TV Shows page
 // TODO: Implement Details page with dynamic data
+// TODO: Implement Search component
 // TODO: Implement streaming APi
 // TODO: Embed movies API
 
-// NICE TODO: Implement custom arrows for the Carousel Component

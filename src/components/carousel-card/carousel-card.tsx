@@ -1,3 +1,6 @@
+import { Link } from "react-router-dom";
+
+
 export default function CarouselCard({
     id,
     title,
@@ -48,9 +51,9 @@ export default function CarouselCard({
                         </a>
                     </li>
                     <li className="hover-item">
-                        <a href="movie-detail.html" className="btn rounded outline fw-6 medium bg-dark">
+                        <Link to="/details" className="btn rounded outline fw-6 medium bg-dark">
                             Details
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>

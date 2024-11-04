@@ -1,13 +1,17 @@
 // import StarRating from "./starRating/starRating";
+import { Link } from "react-router-dom";
+
 
 export default function MovieCard({
-    // id,
+    id,
     title,
     name,
     poster_path,
     vote_average,
     release_date,
     first_air_date,
+    media_type,
+
 }: {
     id: number;
     title: string;
@@ -16,6 +20,8 @@ export default function MovieCard({
     vote_average: number;
     release_date: string;
     first_air_date: string;
+    media_type: string;
+
 }) {
 
     // Get year
@@ -25,6 +31,10 @@ export default function MovieCard({
 
     // Round rating
     const rating = vote_average.toFixed(1)
+
+
+    // Type of media
+    const isMovie = (media_type === "movie") ? "movie" : "tv"
 
     return (
         <li className="movie-item card hoverable">
@@ -45,16 +55,16 @@ export default function MovieCard({
                     </li>
                     <li className="hover-item">
                         <a
-                            href="https://www.youtube.com/embed/R2gbPxeNk2E"
+                            href={"https://vidsrc.xyz/embed/" + isMovie + "/" + id} target="_blank"
                             className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source"
                         >
                             Watch now
                         </a>
                     </li>
                     <li className="hover-item">
-                        <a href="movie-detail.html" className="btn rounded outline fw-6 medium bg-dark">
+                        <Link to="/details" className="btn rounded outline fw-6 medium bg-dark">
                             Details
-                        </a>
+                        </Link>
                     </li>
                 </ul>
             </div>
