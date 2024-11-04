@@ -14,6 +14,7 @@ function App() {
   const [showSearch, setShowSearch] = React.useState(false as boolean)
 
 
+
   return (
     <div>
       <BrowserRouter>
@@ -33,15 +34,10 @@ function App() {
 
 export default App
 
+// TODO: Implement Movies page
+// TODO: Implement TV Shows page
+// TODO: Implement Details page with dynamic data
+// TODO: Implement streaming APi
+// TODO: Embed movies API
 
-//   <div>
-//   <ScrollTop/>
-//   {/* <Nav/> */}
-//   <Routes>
-//   <Route path='/' element={<Home/>}/>
-//   <Route path='/movies' element={ <Movies/>}/>
-//   <Route path='/shows' element={ <Shows/>}/>
-//   {/* <Search/> */}
-//   <Footer/>
-//   </Routes>
-// </div>
+// NICE TODO: Implement custom arrows for the Carousel Component
