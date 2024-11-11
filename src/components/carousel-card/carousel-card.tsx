@@ -51,7 +51,7 @@ export default function CarouselCard({
                         </a>
                     </li>
                     <li className="hover-item">
-                        <Link to="/details" className="btn rounded outline fw-6 medium bg-dark">
+                        <Link to={"/details" + "/" + isMovie + "/" + id} className="btn rounded outline fw-6 medium bg-dark">
                             Details
                         </Link>
                     </li>

@@ -20,8 +20,7 @@ export default function Shows() {
 
 function GetShows() {
 
-    const [listType, setListType] = useState("trending")
-    console.log((listType === "top_rated") ? "active" : "");
+    const [listType, setListType] = useState("popular")
 
     const fetchURL = "https://api.themoviedb.org/3/tv/" + listType + "?language=en-US&page=1"
 
@@ -68,13 +67,13 @@ function GetShows() {
                     <div className="heading control">
                         <h3 className="title center">New Release Movies</h3>
                         <ul className="control-action">
-                            <li className={"action-item" + (listType === "latest") ? "active" : ""}>
-                                <a onClick={() => setListType("latest")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
+                            <li className={(listType === "on_the_air") ? "active" : ""}>
+                                <a onClick={() => setListType("on_the_air")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
-                            <li className={"action-item" + (listType === "trending") ? "active" : ""}>
-                                <a onClick={() => setListType("trending")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Trending</a>
+                            <li className={(listType === "popular") ? "active" : ""}>
+                                <a onClick={() => setListType("popular")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">popular</a>
                             </li>
-                            <li className={"action-item" + (listType === "top_rated") ? "active" : ""}>
+                            <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
                             </li>
                             {/* <li className="action-item">
@@ -95,7 +94,7 @@ function GetShows() {
                                 title: string,
                                 overview: string
                             }) => (
-                                <MovieCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
+                                <MovieCard name={""} first_air_date={""} type={""} poster_path={""} vote_average={0} release_date={""} media_type={""} key={show.id} {...show} />
 
                             ))}
                         </ul>

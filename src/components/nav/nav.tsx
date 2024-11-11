@@ -36,7 +36,7 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                 <div className="navbar-inner">
                     <div className="navbar-logo image">
                         <Link to='/'>
-                            <img src="./src/assets/images/logo.png" alt="Movflx" />
+                            <img src="../src/assets/images/logo.png" alt="Movflx" />
                         </Link>
                     </div>
                     <ul className="navbar-box">

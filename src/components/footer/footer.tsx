@@ -7,7 +7,7 @@ export default function Footer() {
                 <div className="footer-box">
                     <nav className="footer-navbar">
                         <Link to="/" className="navbar-logo image">
-                            <img src="./src/assets/images/logo.png" alt="Movfix" />
+                            <img src="../src/assets/images/logo.png" alt="Movfix" />
                         </Link>
                         <div className="footer-navbar-wrap">
                             <ul className="navbar-box">

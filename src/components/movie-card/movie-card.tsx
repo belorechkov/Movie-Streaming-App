@@ -11,7 +11,7 @@ export default function MovieCard({
     release_date,
     first_air_date,
     media_type,
-
+    type,
 }: {
     id: number;
     title: string;
@@ -21,7 +21,7 @@ export default function MovieCard({
     release_date: string;
     first_air_date: string;
     media_type: string;
-
+    type: string;
 }) {
 
     // Get year
@@ -35,6 +35,9 @@ export default function MovieCard({
 
     // Type of media
     const isMovie = (media_type === "movie") ? "movie" : "tv"
+
+    console.log(type);
+
 
     return (
         <li className="movie-item card hoverable">
@@ -62,7 +65,7 @@ export default function MovieCard({
                         </a>
                     </li>
                     <li className="hover-item">
-                        <Link to="/details" className="btn rounded outline fw-6 medium bg-dark">
+                        <Link to={"/details" + "/" + id} className="btn rounded outline fw-6 medium bg-dark">
                             Details
                         </Link>
                     </li>

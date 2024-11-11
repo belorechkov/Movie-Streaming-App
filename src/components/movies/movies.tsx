@@ -19,7 +19,6 @@ export default function Movies() {
 
 function GetMovies() {
     const [listType, setListType] = useState("popular")
-    console.log((listType === "top_rated") ? "active" : "");
 
     const fetchURL = "https://api.themoviedb.org/3/movie/" + listType + "?language=en-US&page=1"
 
