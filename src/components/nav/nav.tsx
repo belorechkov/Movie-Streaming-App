@@ -36,19 +36,12 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                 <div className="navbar-inner">
                     <div className="navbar-logo image">
                         <Link to='/'>
-                            <img src="../src/assets/images/logo.png" alt="Movflx" />
+                            <img src="/src/assets/images/logo.png" alt="Movflx" />
                         </Link>
                     </div>
                     <ul className="navbar-box">
                         <li className="navbar-item" data-active="tv-show"><Link to="/">Home</Link></li>
-
-                        <li className="navbar-item parent" data-active="movie">
-                            <Link to="/movies">Movies</Link>
-                            <ul className="dropdown">
-                                <li className="dropdown-item"><Link to="movie.html">Movie</Link></li>
-                                <li className="dropdown-item"><Link to="movie-detail.html">Movie details</Link></li>
-                            </ul>
-                        </li>
+                        <li className="navbar-item" data-active="tv-show"><Link to="/movies">Movies</Link></li>
                         <li className="navbar-item" data-active="tv-show"><Link to="/shows">Tv Shows</Link></li>
                         <li className="navbar-item" data-active="favorites"><Link to="/saved">Saved</Link></li>
                     </ul>

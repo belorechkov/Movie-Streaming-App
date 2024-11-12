@@ -1477,11 +1477,13 @@ p.desc.dark {
 .prime-box {
   display: flex;
   align-items: center;
-  max-width: 475px;
+  max-width: 375px;
   padding: 25px;
   background-color: #242c38;
   flex-wrap: wrap;
   row-gap: 25px;
+  border: 1px solid #343434;
+  border-radius: 10px;
 }
 
 .prime-box .prime-item .title {
@@ -1491,7 +1493,7 @@ p.desc.dark {
 }
 
 .prime-box .prime-item .sub-title {
-  font-size: 12px;
+  font-size: 14px;
   color: #bcbcbc;
 }
 
@@ -1512,7 +1514,7 @@ p.desc.dark {
 }
 
 .prime-box .btn {
-  margin-left: auto;
+  /* margin-left: auto; */
   background-color: transparent !important;
   font-size: 10px;
   transition: all 0.25s ease;
@@ -1523,6 +1525,13 @@ p.desc.dark {
     margin-left: unset;
     width: 100%;
     display: inline;
+  }
+}
+
+
+@media (max-width: 575px) {
+  .prime-box {
+    flex-wrap: nowrap
   }
 }
 
@@ -2255,7 +2264,7 @@ p.desc.dark {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 175px 0 120px;
+  padding: 175px 0 100px;
 }
 
 #movie-banner .movie-banner-box {

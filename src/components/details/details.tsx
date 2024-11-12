@@ -94,27 +94,28 @@ function GetMovieDetails() {
                         <p className="desc fw-5">{data.overview}</p>
                         <div className="action prime-box">
                             <div className="share fw-5 prime-item">
-                                <i className="fa fa-share-alt title"></i>
+                                {/* <i className="fa fa-share-alt title"></i>
                                 <a href="#" className="sub-title">
                                     Share
-                                </a>
+                                </a> */}
+                                <p className="sub-title hightlight text-left">Ready to stream</p>
                             </div>
-                            <div className="prime-item">
+                            {/* <div className="prime-item">
                                 <h6 className="fw-7 title">Prime video</h6>
                                 <p className="fw-5 sub-title">Streaming Channels</p>
-                            </div>
+                            </div> */}
                             <a href="https://www.youtube.com/embed/R2gbPxeNk2E" className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a>
                         </div>
                     </div>
-                    <div className="btn-download">
+                    {/* <div className="btn-download">
                         <a href="../../src/assets/images/movies/ucm_poster03.jpg" className="btn super bg-accent fw-5 contained image vertical" download="">
                             Download
                             <img src="../../src/assets/images/download.svg" alt="download" />
                         </a>
-                    </div>
+                    </div> */}
                 </div>
             </section>
 
