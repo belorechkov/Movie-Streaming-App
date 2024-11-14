@@ -1,6 +1,6 @@
 import PopularMovies from "../popular-movies/popular-movies";
-import PopularShows from "../popular-shows/popular-shows";
-import Trending from "../trending/trending";
+// import PopularShows from "../popular-shows/popular-shows";
+// import Trending from "../trending/trending";
 
 export default function Home() {
 
@@ -40,9 +40,9 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-            <Trending />
+            {/* <Trending /> */}
             <PopularMovies />
-            <PopularShows />
+            {/* <PopularShows /> */}
             <section id="coming-movie" className="suggestion">
                 <div className="suggestion-box">
                     <div className="heading">

@@ -45,6 +45,10 @@ function GetMovieDetails() {
     // Round rating
     const rating = data.vote_average.toFixed(1);
 
+
+    const title = data.title ? data.title : data.name
+    const titleLastWord = (data.title ? data.title : data.name).split(' ').pop()
+
     return (
         <div>
             <section id="movie-banner">
@@ -56,13 +60,14 @@ function GetMovieDetails() {
                         </a>
                     </div>
                     <div className="content">
-                        {/* <h5 className="sub-title fw-7 hightlight">New Espisodes</h5> */}
+                        <h5 className="sub-title fw-7 hightlight">New Espisodes</h5>
                         <h2 className="title fw-7">
-                            {data.title ? data.title : data.name}
-                            <span className="hightlight"></span>
+                            {title.split(' ').slice(0, -1).join(' ')}
+                            <span className="hightlight">{titleLastWord}</span>
                         </h2>
                         <ul className="meta">
-                            {data.adult ? <li className="meta-item meta-square bg-light">pg 18</li> : <></>}
+                            <li className="meta-item meta-square bg-light">{showType}</li>
+                            {/* {data.adult ? <li className="meta-item meta-square bg-light">pg 18</li> : <></>} */}
                             <li className="meta-item meta-outline bg-dark">HD</li>
                             <li className="meta-item meta-text type">
                                 {data.genres.map((genre: { id: Key; name: string }) => {

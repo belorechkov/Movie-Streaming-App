@@ -8,6 +8,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Carousel from "../carousel/carousel";
 
 const title = "Trending This Week"
+const mediaType = "tv"
 
 const queryClient = new QueryClient();
 
@@ -49,44 +50,7 @@ function GetTrending() {
     if (error) return "An error has occurred: " + error.message;
 
     return (
-        <Carousel data={data} title={title} />
-
-
-        // <div>
-        //     <section id="new-release" className="suggestion">
-        //         <div className="suggestion-box">
-        //             <div className="heading">
-        //                 <p className="sub-title hightlight">Online streaming</p>
-        //             </div>
-        //             <div className="heading control">
-        //                 <h3 className="title center">Trending This Week</h3>
-        //                 <ul className="control-action">
-        //                     {/* <li className="action-item control">
-        //                         <div className="double-btn btn rounded fw-6 outline-dark small bg-dark lowercase">
-        //                             <a href="#"><i className="fa fa-angle-left"></i></a>
-        //                             <a href="#"><i className="fa fa-angle-right"></i></a>
-        //                         </div>
-        //                     </li> */}
-        //                 </ul>
-        //             </div>
-        //             <div className="movie-wrapper">
-        //                 {/* <ul className="movie-box grid-layout grid-card">
-        //                     {data.results.map((show: {
-        //                         id: number,
-        //                         title: string,
-        //                         overview: string
-        //                     }) => (
-        //                         <MovieCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
-
-        //                     ))}
-        //                 </ul> */}
-        //             </div>
-        //             <div className="slick-track grid-card carousel">
-        //                 <Carousel data={data} />
-        //             </div>
-        //         </div>
-        //     </section>
-        // </div>
+        <Carousel data={data} title={title} mediaType={mediaType}/>
     );
 }
 

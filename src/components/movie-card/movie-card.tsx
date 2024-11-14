@@ -34,7 +34,7 @@ export default function MovieCard({
 
 
     // Type of media
-    const isMovie = (media_type === "movie") ? "movie" : "tv"
+    const isMovie = (media_type === "tv") ? "movie" : "tv"
 
     console.log(type);
 
@@ -65,7 +65,7 @@ export default function MovieCard({
                         </a>
                     </li>
                     <li className="hover-item">
-                        <Link to={"/details" + "/" + id} className="btn rounded outline fw-6 medium bg-dark">
+                        <Link to={"/details" + "/" + isMovie + "/" + id} className="btn rounded outline fw-6 medium bg-dark">
                             Details
                         </Link>
                     </li>

@@ -1,9 +1,9 @@
-import React, { useRef } from "react";
+import { useRef } from "react";
 import Slider from "react-slick";
 
 import CarouselCard from "../carousel-card/carousel-card";
 
-export default function Carousel({ data, title }) {
+export default function Carousel({ data, title, mediaType }) {
 
 
     let sliderRef = useRef(null);
@@ -100,7 +100,7 @@ export default function Carousel({ data, title }) {
                             }}
                             {...settings}>
                             {data.results.map((show: { id: number; title: string; overview: string }) => (
-                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} media_type={""} {...show} />
+                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} mediaType={""} {...show} />
                             ))}
                         </Slider>
                     </div>

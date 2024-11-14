@@ -9,7 +9,7 @@ export default function CarouselCard({
     vote_average,
     release_date,
     first_air_date,
-    media_type,
+    mediaType,
 }: {
     id: number;
     title: string;
@@ -18,7 +18,7 @@ export default function CarouselCard({
     vote_average: number;
     release_date: string;
     first_air_date: string;
-    media_type: string;
+    mediaType: string;
 }) {
     // Get year
     const dateStr = release_date ? release_date : first_air_date;
@@ -29,7 +29,9 @@ export default function CarouselCard({
     const rating = vote_average.toFixed(1);
 
     // Type of media
-    const isMovie = (media_type === "movie") ? "movie" : "tv"
+    const isMovie = (mediaType === "movie") ? "movie" : "tv"
+    console.log(mediaType);
+    
 
     return (
         <li className="movie-item card hoverable" style={{ maxWidth: "100%" }}>
