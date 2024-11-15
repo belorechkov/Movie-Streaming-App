@@ -55,12 +55,12 @@ function GetMovieDetails() {
                 <div className="movie-banner-box">
                     <div className="image thumb-image">
                         <img className="" src={"https://image.tmdb.org/t/p/original//" + data.poster_path} alt="movie" />
-                        <a href="https://www.youtube.com/embed/R2gbPxeNk2E" className="play-btn trailer-source">
+                        <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="play-btn trailer-source">
                             <img src="../../src/assets/images/play_icon.png" alt="play_icon" />
                         </a>
                     </div>
                     <div className="content">
-                        <h5 className="sub-title fw-7 hightlight">New Espisodes</h5>
+                        {/* <h5 className="sub-title fw-7 hightlight">New Espisodes</h5> */}
                         <h2 className="title fw-7">
                             {title.split(' ').slice(0, -1).join(' ')}
                             <span className="hightlight">{titleLastWord}</span>
@@ -109,7 +109,7 @@ function GetMovieDetails() {
                                 <h6 className="fw-7 title">Prime video</h6>
                                 <p className="fw-5 sub-title">Streaming Channels</p>
                             </div> */}
-                            <a href="https://www.youtube.com/embed/R2gbPxeNk2E" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                            <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a>
@@ -124,7 +124,7 @@ function GetMovieDetails() {
                 </div>
             </section>
 
-            <section id="movie-detail">
+            {/* <section id="movie-detail">
                 <div className="movie-detail-box">
                     <div className="main-detail-box">
                         <div className="main-detail">
@@ -445,7 +445,7 @@ function GetMovieDetails() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
         </div>
     );
 }

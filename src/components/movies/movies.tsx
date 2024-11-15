@@ -8,6 +8,9 @@ import { useState } from "react";
 
 const queryClient = new QueryClient();
 
+const mediaType = "movie"
+
+
 export default function Movies() {
 
     return (
@@ -91,8 +94,13 @@ function GetMovies() {
                                 id: number,
                                 title: string,
                                 overview: string
+                                name: string
+                                first_air_date: string
+                                type: string
+                                poster_path: string
+                                release_date: string
                             }) => (
-                                <MovieCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
+                                <MovieCard vote_average={0} key={show.id} {...show} media_type={mediaType} />
 
                             ))}
                         </ul>

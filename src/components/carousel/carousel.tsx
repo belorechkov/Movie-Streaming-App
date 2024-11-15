@@ -3,15 +3,33 @@ import Slider from "react-slick";
 
 import CarouselCard from "../carousel-card/carousel-card";
 
-export default function Carousel({ data, title, mediaType }) {
+type Show = {
+    id: number;
+    title: string;
+    overview: string;
+    first_air_date?: string;
+    poster_path?: string;
+    vote_average?: number;
+    release_date?: string;
+};
+
+type CarouselProps = {
+    data: {
+        results: Show[];
+    };
+    title: string;
+    mediaType: string;
+};
+
+export default function Carousel({ data, title, mediaType }: CarouselProps) {
 
 
-    let sliderRef = useRef(null);
+    const sliderRef = useRef<Slider>(null);
     const next = () => {
-        sliderRef.slickNext();
+        sliderRef.current?.slickNext();
     };
     const previous = () => {
-        sliderRef.slickPrev();
+        sliderRef.current?.slickPrev();
     };
 
     const settings = {
@@ -67,7 +85,7 @@ export default function Carousel({ data, title, mediaType }) {
         <div>
             <section id="new-release" className="suggestion">
                 <div className="suggestion-box">
-                    <div className="heading">
+                    <div className="heading control">
                         <p className="sub-title hightlight">Online streaming</p>
                     </div>
                     <div className="heading control">
@@ -95,12 +113,10 @@ export default function Carousel({ data, title, mediaType }) {
                     </div>
                     <div className="slick-track grid-card carousel">
                         <Slider
-                            ref={slider => {
-                                sliderRef = slider;
-                            }}
+                            ref={sliderRef}
                             {...settings}>
                             {data.results.map((show: { id: number; title: string; overview: string }) => (
-                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} mediaType={""} {...show} />
+                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} mediaType={mediaType} {...show} />
                             ))}
                         </Slider>
                     </div>

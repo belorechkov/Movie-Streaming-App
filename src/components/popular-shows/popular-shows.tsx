@@ -11,6 +11,7 @@ const title = "Popular TV Shows"
 
 
 const queryClient = new QueryClient();
+const mediaType = "tv"
 
 // type Show = {
 //     backdrop_path: string,
@@ -51,7 +52,7 @@ function GetTrending() {
 
     return (
 
-        <Carousel data={data} title={title} />
+        <Carousel data={data} title={title} mediaType={mediaType} />
         // <div>
         //     <section id="new-release" className="suggestion">
         //         <div className="suggestion-box">

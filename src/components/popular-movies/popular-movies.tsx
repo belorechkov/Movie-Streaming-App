@@ -41,7 +41,7 @@ function GetTrending() {
     if (error) return "An error has occurred: " + error.message;
 
     return (
-        <Carousel data={data} title={title} mediaType={mediaType}/>
+        <Carousel data={data} title={title} mediaType={mediaType} />
     );
 }
 

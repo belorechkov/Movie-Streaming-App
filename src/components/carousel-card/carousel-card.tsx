@@ -30,8 +30,7 @@ export default function CarouselCard({
 
     // Type of media
     const isMovie = (mediaType === "movie") ? "movie" : "tv"
-    console.log(mediaType);
-    
+
 
     return (
         <li className="movie-item card hoverable" style={{ maxWidth: "100%" }}>

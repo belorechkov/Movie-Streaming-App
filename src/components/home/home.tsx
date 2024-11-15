@@ -1,6 +1,6 @@
 import PopularMovies from "../popular-movies/popular-movies";
-// import PopularShows from "../popular-shows/popular-shows";
-// import Trending from "../trending/trending";
+import PopularShows from "../popular-shows/popular-shows";
+import Trending from "../trending/trending";
 
 export default function Home() {
 
@@ -40,10 +40,10 @@ export default function Home() {
                     </a>
                 </div>
             </section>
-            {/* <Trending /> */}
+            <Trending />
             <PopularMovies />
-            {/* <PopularShows /> */}
-            <section id="coming-movie" className="suggestion">
+            <PopularShows />
+            {/* <section id="coming-movie" className="suggestion">
                 <div className="suggestion-box">
                     <div className="heading">
                         <p className="sub-title hightlight">Online streaming</p>
@@ -217,7 +217,7 @@ export default function Home() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             {/* <section id="download-service">
                 <div className="service-box">
@@ -264,7 +264,7 @@ export default function Home() {
                 </div>
             </section> */}
 
-            <section id="top-rated">
+            {/* <section id="top-rated">
                 <div className="top-rated-box">
                     <div className="heading">
                         <div className="sub-title hightlight center">Online streaming</div>
@@ -487,7 +487,7 @@ export default function Home() {
                         </li>
                     </ul>
                 </div>
-            </section>
+            </section> */}
 
             {/* <section id="live-movie">
                 <div className="live-movie-box">
@@ -545,7 +545,7 @@ export default function Home() {
                 </div>
             </section> */}
 
-            <section id="best-serie" className="suggestion">
+            {/* <section id="best-serie" className="suggestion">
                 <div className="suggestion-box">
                     <div className="heading">
                         <p className="sub-title hightlight center">Best tv series</p>
@@ -702,7 +702,7 @@ export default function Home() {
                         </ul>
                     </div>
                 </div>
-            </section>
+            </section> */}
 
             <div data-component="footer" className="root-inner" load-html="./src/components/footer.html"></div>
 

@@ -8,6 +8,9 @@ import { useState } from "react";
 
 const queryClient = new QueryClient();
 
+const mediaType = "tv"
+
+
 export default function Shows() {
 
 
@@ -93,8 +96,13 @@ function GetShows() {
                                 id: number,
                                 title: string,
                                 overview: string
+                                name: string
+                                first_air_date: string
+                                type: string
+                                poster_path: string
+                                release_date: string
                             }) => (
-                                <MovieCard name={""} first_air_date={""} type={""} poster_path={""} vote_average={0} release_date={""} media_type={""} key={show.id} {...show} />
+                                <MovieCard vote_average={0} key={show.id} {...show} media_type={mediaType} />
 
                             ))}
                         </ul>
