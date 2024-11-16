@@ -1,6 +1,7 @@
 import PopularMovies from "../popular-movies/popular-movies";
 import PopularShows from "../popular-shows/popular-shows";
 import Trending from "../trending/trending";
+import { Link } from "react-router-dom";
 
 export default function Home() {
 
@@ -9,7 +10,7 @@ export default function Home() {
         <div>
             <section id="banner">
                 <div className="banner-box">
-                    <h3 className="hightlight fw-7">Watch</h3>
+                    <h3 className="hightlight fw-7" >Watch</h3>
                     <h2 className="title fw-7 text-white">
                         Unlimited
                         <span className="hightlight"> Movies</span>,
@@ -33,11 +34,11 @@ export default function Home() {
                             </div>
                         </li>
                     </ul> */}
-                    <a href="https://www.youtube.com/embed/R2gbPxeNk2E"
+                    <Link to="/movies"
                         className="btn rounded outline large bg-dark fw-7 space trailer-source">
                         <i className="fa fa-play"></i>
-                        Watch now
-                    </a>
+                        Browse Movies
+                    </Link>
                 </div>
             </section>
             <Trending />
