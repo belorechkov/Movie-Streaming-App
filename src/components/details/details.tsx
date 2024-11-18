@@ -1,8 +1,12 @@
 import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { Key } from "react";
 import { useParams } from "react-router-dom";
+import VideoModal from "../video-modal;/video-modal";
+import React from "react";
 
 const queryClient = new QueryClient();
+
+
 
 export default function Details() {
     return (
@@ -13,6 +17,8 @@ export default function Details() {
 }
 
 function GetMovieDetails() {
+    const [modalShow, setModalShow] = React.useState(false);
+
     const { showType, id } = useParams();
 
     const URL = "https://api.themoviedb.org/3/" + showType + "/" + id + "?language=en-US";
@@ -48,6 +54,8 @@ function GetMovieDetails() {
 
     const title = data.title ? data.title : data.name
     const titleLastWord = (data.title ? data.title : data.name).split(' ').pop()
+
+    
 
     return (
         <div>
@@ -109,7 +117,11 @@ function GetMovieDetails() {
                                 <h6 className="fw-7 title">Prime video</h6>
                                 <p className="fw-5 sub-title">Streaming Channels</p>
                             </div> */}
-                            <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                            {/* <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                                <i className="fa fa-play"></i>
+                                Watch now
+                            </a> */}
+                            <a onClick={() => setModalShow(true)} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a>

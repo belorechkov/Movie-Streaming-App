@@ -1,5 +1,6 @@
 
 
+import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import ScrollTop from './components/scroll-top/scroll-top'
 import Home from './components/home/home'
@@ -8,7 +9,6 @@ import Search from './components/search/search'
 import Movies from './components/movies/movies'
 import Shows from './components/shows/shows'
 import Footer from './components/footer/footer'
-import React from 'react'
 import Details from './components/details/details'
 
 function App() {
