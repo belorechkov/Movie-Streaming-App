@@ -35,7 +35,7 @@ export default function MovieCard({
             <div className="movie-image image rounded">
                 <a href="movie-detail.html">
                     <img
-                        src={"https://image.tmdb.org/t/p/original//" + poster_path}
+                        src={"https://image.tmdb.org/t/p/w500//" + poster_path}
                         alt="movie"
                     />
                 </a>
