@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../../movie-card/movie-card"
-import { useState } from "react";
 import CarouselLoader from "../../carousel/carousel-loader/carousel-loader";
 
 const queryClient = new QueryClient();
@@ -19,10 +18,12 @@ export default function SearchResults() {
     );
 }
 
-function FetchSearch() {
-    const { query } = useParams();
 
-    const [listType, setListType] = useState("popular")
+
+function FetchSearch() {
+
+
+    const { query } = useParams();
 
     const fetchURL = "https://api.themoviedb.org/3/search/multi?query=" + query + "&include_adult=false&language=en-US&page=1"
     const options = {
@@ -33,7 +34,7 @@ function FetchSearch() {
         },
     };
     const { isPending, error, data } = useQuery({
-        queryKey: ["search"],
+        queryKey: ["search", query],
         queryFn: async () => {
             const response = await fetch(fetchURL, options);
             return await response.json();
@@ -66,9 +67,9 @@ function FetchSearch() {
                         {/* <p className="sub-title hightlight">Online streaming</p> */}
                     </div>
                     <div className="heading control">
-                        <h3 className="title center">Results</h3>
+                        <h3 className="title center">Search results for "{query}"</h3>
                         <ul className="control-action">
-                            <li className={(listType === "latest") ? "active" : ""}>
+                            {/* <li className={(listType === "latest") ? "active" : ""}>
                                 <a onClick={() => setListType("latest")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
                             <li className={(listType === "popular") ? "active" : ""}>
@@ -76,7 +77,7 @@ function FetchSearch() {
                             </li>
                             <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
-                            </li>
+                            </li> */}
                             {/* <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
                                     className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>
@@ -105,7 +106,7 @@ function FetchSearch() {
                             ))}
                         </ul>
                     </div>
-                    <ul className="pagination">
+                    {/* <ul className="pagination">
                         <li className="pagination-item active">
                             <a href="#" className="fw-6">1</a>
                         </li>
@@ -121,7 +122,7 @@ function FetchSearch() {
                         <li className="pagination-item">
                             <a href="#" className="fw-6">Next</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
 

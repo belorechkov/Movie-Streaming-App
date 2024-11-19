@@ -22,7 +22,7 @@ export default function Movies() {
 }
 
 function GetMovies() {
-    const [listType, setListType] = useState("popular")
+    const [listType,] = useState("popular")
 
     const fetchURL = "https://api.themoviedb.org/3/movie/" + listType + "?language=en-US&page=1"
 
@@ -69,7 +69,7 @@ function GetMovies() {
                     <div className="heading control">
                         <h3 className="title center">Top Rated Movies</h3>
                         <ul className="control-action">
-                            <li className={(listType === "latest") ? "active" : ""}>
+                            {/* <li className={(listType === "latest") ? "active" : ""}>
                                 <a onClick={() => setListType("latest")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
                             <li className={(listType === "popular") ? "active" : ""}>
@@ -77,7 +77,7 @@ function GetMovies() {
                             </li>
                             <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
-                            </li>
+                            </li> */}
                             {/* <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
                                     className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>
@@ -106,7 +106,7 @@ function GetMovies() {
                             ))}
                         </ul>
                     </div>
-                    <ul className="pagination">
+                    {/* <ul className="pagination">
                         <li className="pagination-item active">
                             <a href="#" className="fw-6">1</a>
                         </li>
@@ -122,7 +122,7 @@ function GetMovies() {
                         <li className="pagination-item">
                             <a href="#" className="fw-6">Next</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
 

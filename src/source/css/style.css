@@ -4717,6 +4717,7 @@ p.desc.dark {
   /* font-size: 30px; */
   color: #e4d804;
   font-weight: 900;
+  background-color: transparent;
 }
 
 #to-top-btn {

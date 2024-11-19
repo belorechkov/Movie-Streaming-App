@@ -15,9 +15,10 @@ export default function Search({ showSearch, setShowSearch }: { showSearch: unkn
 
     const searchPage = useNavigate();
 
-    const sendSearchQuery = (e: MouseEvent<HTMLElement, globalThis.MouseEvent>) => {
+    const sendSearchQuery = (e: React.FormEvent<HTMLFormElement>) => {
+        e.preventDefault(); // Prevent default form submission
         searchPage(`/search/${searchQuery}`);
-        setShowSearch(prevState => !prevState)
+        setShowSearch((prevState) => !prevState);
         setSearchQuery('');
     };
 
@@ -26,7 +27,7 @@ export default function Search({ showSearch, setShowSearch }: { showSearch: unkn
             <section id="search" className={showSearch ? 'show' : ''} >
                 <form className="search-box" onSubmit={sendSearchQuery}>
                     <input type="text" id="search-top" placeholder="Search here..." value={searchQuery} onChange={(e) => setSearchQuery(e.target.value)} />
-                    <button type="submit"><i className="fa fa-search"></i></button>
+                    <button type="submit" ><i className="fa fa-search"></i></button>
                     {/* <label htmlFor="search-top"><i className="fa fa-search" onClick={(e) => sendSearchQuery(e)}></i></label> */}
                 </form>
             </section>
