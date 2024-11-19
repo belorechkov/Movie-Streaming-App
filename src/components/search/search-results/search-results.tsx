@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../../movie-card/movie-card"
 import CarouselLoader from "../../carousel/carousel-loader/carousel-loader";
+import NoResult from "../no-result/no-result";
 
 const queryClient = new QueryClient();
 
@@ -91,19 +92,25 @@ function FetchSearch() {
                     </div>
                     <div className="movie-wrapper">
                         <ul className="movie-box grid-layout grid-card">
-                            {data.results.map((show: {
-                                id: number,
-                                title: string,
-                                overview: string
-                                name: string
-                                first_air_date: string
-                                type: string
-                                poster_path: string
-                                release_date: string
-                            }) => (
-                                <MovieCard vote_average={0} key={show.id} {...show} />
+                            {data.results.length > 0 ? (
+                                data.results
+                                    .filter((show: { poster_path: string }) => show.poster_path)
+                                    .map((show: {
+                                        id: number,
+                                        title: string,
+                                        overview: string
+                                        name: string
+                                        first_air_date: string
+                                        type: string
+                                        poster_path: string
+                                        release_date: string
+                                    }) => (
+                                        <MovieCard vote_average={0} key={show.id} {...show} />
 
-                            ))}
+                                    ))
+                            ) : (
+                                <NoResult />
+                            )}
                         </ul>
                     </div>
                     {/* <ul className="pagination">
