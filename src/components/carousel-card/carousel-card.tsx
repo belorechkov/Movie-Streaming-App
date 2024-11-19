@@ -9,6 +9,7 @@ export default function CarouselCard({
     release_date,
     first_air_date,
     mediaType,
+    media_type,
 }: {
     id: number;
     title: string;
@@ -17,7 +18,9 @@ export default function CarouselCard({
     vote_average: number;
     release_date: string;
     first_air_date: string;
-    mediaType: string;
+    mediaType?: string;
+    media_type?: string
+
 }) {
     // Get year
     const dateStr = release_date ? release_date : first_air_date;
@@ -28,7 +31,8 @@ export default function CarouselCard({
     const rating = vote_average.toFixed(1);
 
     // Type of media
-    const isMovie = (mediaType === "movie") ? "movie" : "tv"
+    const type = mediaType || media_type
+    const isMovie = (type === "movie") ? "movie" : "tv"
 
 
     return (

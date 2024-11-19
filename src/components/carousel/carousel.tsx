@@ -11,6 +11,7 @@ type Show = {
     poster_path?: string;
     vote_average?: number;
     release_date?: string;
+    media_type?: string
 };
 
 type CarouselProps = {
@@ -100,23 +101,13 @@ export default function Carousel({ data, title, mediaType }: CarouselProps) {
                         </ul>
                     </div>
                     <div className="movie-wrapper">
-                        {/* <ul className="movie-box grid-layout grid-card">
-                            {data.results.map((show: {
-                                id: number,
-                                title: string,
-                                overview: string
-                            }) => (
-                                <MovieCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} {...show} />
-
-                            ))}
-                        </ul> */}
                     </div>
                     <div className="slick-track grid-card carousel">
                         <Slider
                             ref={sliderRef}
                             {...settings}>
                             {data.results.map((show: { id: number; title: string; overview: string }) => (
-                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} mediaType={mediaType} {...show} />
+                                <CarouselCard name={""} first_air_date={""} poster_path={""} vote_average={0} release_date={""} key={show.id} mediaType={mediaType} media_type={""} {...show} />
                             ))}
                         </Slider>
                     </div>

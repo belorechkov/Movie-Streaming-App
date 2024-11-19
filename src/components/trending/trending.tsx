@@ -9,7 +9,7 @@ import Carousel from "../carousel/carousel";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 
 const title = "Trending This Week"
-const mediaType = "tv"
+const mediaType = ""
 
 const queryClient = new QueryClient();
 

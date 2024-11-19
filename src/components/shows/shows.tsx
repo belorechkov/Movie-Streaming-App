@@ -24,7 +24,7 @@ export default function Shows() {
 
 function GetShows() {
 
-    const [listType, setListType] = useState("popular")
+    const [listType,] = useState("popular")
 
     const fetchURL = "https://api.themoviedb.org/3/tv/" + listType + "?language=en-US&page=1"
 
@@ -65,13 +65,10 @@ function GetShows() {
 
             <section id="new-release" className="suggestion">
                 <div className="suggestion-box">
-                    <div className="heading">
-                        <p className="sub-title hightlight">Online streaming</p>
-                    </div>
                     <div className="heading control">
-                        <h3 className="title center">New Release Movies</h3>
+                        <h3 className="title center">Top Rated Shows</h3>
                         <ul className="control-action">
-                            <li className={(listType === "on_the_air") ? "active" : ""}>
+                            {/* <li className={(listType === "on_the_air") ? "active" : ""}>
                                 <a onClick={() => setListType("on_the_air")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
                             <li className={(listType === "popular") ? "active" : ""}>
@@ -79,7 +76,7 @@ function GetShows() {
                             </li>
                             <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
-                            </li>
+                            </li> */}
                             {/* <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
                                     className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>
@@ -108,7 +105,7 @@ function GetShows() {
                             ))}
                         </ul>
                     </div>
-                    <ul className="pagination">
+                    {/* <ul className="pagination">
                         <li className="pagination-item active">
                             <a href="#" className="fw-6">1</a>
                         </li>
@@ -124,7 +121,7 @@ function GetShows() {
                         <li className="pagination-item">
                             <a href="#" className="fw-6">Next</a>
                         </li>
-                    </ul>
+                    </ul> */}
                 </div>
             </section>
 
