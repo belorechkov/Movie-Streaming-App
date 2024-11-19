@@ -17,7 +17,7 @@ export default function Details() {
 }
 
 function GetMovieDetails() {
-    const [modalShow, setModalShow] = React.useState(false);
+    const [, setModalShow] = React.useState(false);
 
     const { showType, id } = useParams();
 

@@ -4598,7 +4598,7 @@ p.desc.dark {
     line-height: 30px;
   }
 
-  #search form.search-box label {
+  #search form.search-box button {
     font-size: 20px;
   }
 }
@@ -4613,7 +4613,7 @@ p.desc.dark {
     line-height: 36px;
   }
 
-  #search form.search-box label {
+  #search form.search-box button {
     font-size: 24px;
   }
 }
@@ -4628,7 +4628,7 @@ p.desc.dark {
     line-height: 40px;
   }
 
-  #search form.search-box label {
+  #search form.search-box button {
     font-size: 26px;
   }
 }
@@ -4643,7 +4643,7 @@ p.desc.dark {
     line-height: 48px;
   }
 
-  #search form.search-box label {
+  #search form.search-box button {
     font-size: 26px;
   }
 }
@@ -4658,7 +4658,7 @@ p.desc.dark {
     line-height: 50px;
   }
 
-  #search form.search-box label {
+  #search form.search-box button {
     font-size: 30px;
   }
 }
@@ -4709,7 +4709,7 @@ p.desc.dark {
   color: #555;
 }
 
-#search form.search-box label {
+#search form.search-box button {
   position: absolute;
   top: 50%;
   right: 40px;

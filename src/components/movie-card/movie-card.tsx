@@ -19,7 +19,7 @@ export default function MovieCard({
     vote_average: number;
     release_date: string;
     first_air_date: string;
-    media_type: string;
+    media_type?: string;
 }) {
 
     // Get year
