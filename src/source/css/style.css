@@ -2262,6 +2262,7 @@ p.desc.dark {
 }
 
 #movie-banner {
+  background-color: #171d22;
   background-image: url("../../assets/images/bg/movie_details_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;

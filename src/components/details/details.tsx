@@ -1,8 +1,8 @@
 import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { Key } from "react";
 import { useParams } from "react-router-dom";
-import VideoModal from "../video-modal;/video-modal";
 import React from "react";
+import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 
 const queryClient = new QueryClient();
 
@@ -39,7 +39,7 @@ function GetMovieDetails() {
     });
 
 
-    if (isPending) return "Loading...";
+    if (isPending) return <CarouselLoader />;
 
     if (error) return "An error has occurred: " + error.message;
 
@@ -55,7 +55,7 @@ function GetMovieDetails() {
     const title = data.title ? data.title : data.name
     const titleLastWord = (data.title ? data.title : data.name).split(' ').pop()
 
-    
+
 
     return (
         <div>
