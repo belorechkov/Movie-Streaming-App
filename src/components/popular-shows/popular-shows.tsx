@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import MovieCard from "../movie-card/movie-card"
 // import CarouselCard from "../carousel-card/carousel-card";
 import Carousel from "../carousel/carousel";
+import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 
 const title = "Popular TV Shows"
 
@@ -46,7 +47,7 @@ function GetTrending() {
         },
     });
 
-    if (isPending) return "Loading...";
+    if (isPending) return <CarouselLoader />;
 
     if (error) return "An error has occurred: " + error.message;
 

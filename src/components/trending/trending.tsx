@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 // import MovieCard from "../movie-card/movie-card"
 // import CarouselCard from "../carousel-card/carousel-card";
 import Carousel from "../carousel/carousel";
+import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 
 const title = "Trending This Week"
 const mediaType = "tv"
@@ -45,12 +46,12 @@ function GetTrending() {
         },
     });
 
-    if (isPending) return "Loading...";
+    if (isPending) return <CarouselLoader />;
 
     if (error) return "An error has occurred: " + error.message;
 
     return (
-        <Carousel data={data} title={title} mediaType={mediaType}/>
+        <Carousel data={data} title={title} mediaType={mediaType} />
     );
 }
 

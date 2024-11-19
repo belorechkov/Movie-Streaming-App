@@ -5,6 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../movie-card/movie-card"
 import { useState } from "react";
+import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 
 const queryClient = new QueryClient();
 
@@ -40,7 +41,7 @@ function GetMovies() {
         },
     });
 
-    if (isPending) return "Loading...";
+    if (isPending) return <CarouselLoader />;
 
     if (error) return "An error has occurred: " + error.message;
 

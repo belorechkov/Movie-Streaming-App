@@ -1170,7 +1170,6 @@ p.desc.dark {
 
 .grid-card .card.hoverable .image {
   position: relative;
-
 }
 
 .grid-card .card.hoverable .image .hover-box {
@@ -1531,10 +1530,9 @@ p.desc.dark {
   }
 }
 
-
 @media (max-width: 575px) {
   .prime-box {
-    flex-wrap: nowrap
+    flex-wrap: nowrap;
   }
 }
 
@@ -2160,6 +2158,7 @@ p.desc.dark {
 }
 
 #banner {
+  background-color: #171d22;
   background-image: url("../../assets/images/banner/banner_bg01.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -2458,6 +2457,7 @@ p.desc.dark {
 }
 
 #breadcrumb {
+  background-color: #171d22;
   background-image: linear-gradient(160deg, rgba(9, 16, 37, 0.65) 30%, rgba(0, 0, 0, 0.2) 70%), url("../../assets/images/bg/breadcrumb_bg.jpg");
   background-position: center;
   background-size: cover;
@@ -2543,7 +2543,8 @@ p.desc.dark {
 
 #new-release,
 #tv-show {
-  background-image: url("../../assets/images/bg/ucm_bg_shape.png"), url("../../assets/images/bg/movie_bg.jpg");
+  background-color: #14131b;
+  background-image:  url("../../assets/images/bg/movie_bg.jpg");
   background-position: center bottom, center;
   background-repeat: repeat, repeat;
   background-size: contain, cover;
@@ -4264,6 +4265,7 @@ p.desc.dark {
 }
 
 #footer {
+  background-color: #171d22;
   background-image: url("../../assets/images/bg/footer_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
@@ -4588,32 +4590,26 @@ p.desc.dark {
 @media (max-width: 575px) {
   #search form.search-box {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-
   }
 
   #search form.search-box input {
     font-size: 20px;
     line-height: 30px;
-
   }
 
   #search form.search-box label {
     font-size: 20px;
   }
-
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
   #search form.search-box {
     border-bottom: 2px solid rgba(255, 255, 255, 0.1);
-
   }
 
   #search form.search-box input {
-
     font-size: 24px;
     line-height: 36px;
-
   }
 
   #search form.search-box label {
@@ -4629,7 +4625,6 @@ p.desc.dark {
   #search form.search-box input {
     font-size: 26px;
     line-height: 40px;
-
   }
 
   #search form.search-box label {
@@ -4645,7 +4640,6 @@ p.desc.dark {
   #search form.search-box input {
     font-size: 30px;
     line-height: 48px;
-
   }
 
   #search form.search-box label {
@@ -4661,7 +4655,6 @@ p.desc.dark {
   #search form.search-box input {
     font-size: 34px;
     line-height: 50px;
-
   }
 
   #search form.search-box label {
@@ -4820,7 +4813,6 @@ p.desc.dark {
 } */
 
 .grid-card.carousel-card {
-
   max-width: 100%;
   /* display: flex;
   flex-direction: column;
@@ -4864,4 +4856,59 @@ p.desc.dark {
   color: #e4d804;
 }
 
-/*# sourceMappingURL=style.css.map */
+#loader {
+  background-color: #171d22;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+  margin-top: 0px;
+  top: 0px;
+  position: relative;
+  left: 50%;
+  top: 50%;
+}
+
+#carousel-loader {
+  background-color: #171d22;
+  height: 700px;
+  /* width: 1200px; */
+  margin: auto;
+  top: 0px;
+  left: 50%;
+  top: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+@media (max-width: 575px) {
+  #carousel-loader {
+    height: 600px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  #carousel-loader {
+    height: 600px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  #carousel-loader {
+    height: 800px;
+  }
+}
+
+@media (min-width: 1200px) and (max-width: 1599px) {
+  #carousel-loader {
+    height: 650px;
+  }
+}
+
+@media (min-width: 1600px) {
+  #carousel-loader {
+    height: 700px;
+  }
+}
