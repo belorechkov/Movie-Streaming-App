@@ -1055,9 +1055,15 @@ p.desc.dark {
   transition: all 0.25s ease;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 575px) {
   .heading .title {
-    font-size: 32px;
+    font-size: 26px;
+  }
+}
+
+@media (min-width: 575px) and (max-width: 991px) {
+  .heading .title {
+    font-size: 30px;
   }
 }
 
@@ -1120,11 +1126,17 @@ p.desc.dark {
   .grid-card .card {
     max-width: calc(100% - 0px);
   }
+  .slick-slide>div {
+    margin: 0 5px;
+  }
 }
 
 @media (min-width: 575px) and (max-width: 991px) {
   .grid-card .card {
     max-width: calc(50% - 15px);
+  }
+  .slick-slide>div {
+    margin: 0 8px;
   }
 }
 
@@ -1132,17 +1144,26 @@ p.desc.dark {
   .grid-card .card {
     max-width: calc(33.3333333333% - 25px);
   }
+  .slick-slide>div {
+    margin: 0 10px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1599px) {
   .grid-card .card {
     max-width: calc(25% - 25px);
   }
+  .slick-slide>div {
+    margin: 0 12px;
+  }
 }
 
 @media (min-width: 1600px) {
   .grid-card .card {
     max-width: calc(20% - 25px);
+  }
+  .slick-slide>div {
+    margin: 0 15px;
   }
 }
 
@@ -1235,7 +1256,7 @@ p.desc.dark {
   .suggestion .suggestion-box {
     width: 100%;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 
@@ -1243,7 +1264,7 @@ p.desc.dark {
   .suggestion .suggestion-box {
     width: 540px;
     margin: 0 auto;
-    padding: 0 15px;
+    padding: 0 10px;
   }
 }
 
@@ -4697,11 +4718,9 @@ p.desc.dark {
 #search form.search-box input {
   width: 100%;
   padding: 0 85px 12px 40px;
-  background-color: transparent;
+  background-color: transparent ;
   outline: none;
   border: 0;
-  /* font-size: 30px; */
-  /* line-height: 54px; */
   color: #555;
 }
 
@@ -4775,7 +4794,7 @@ p.desc.dark {
 
 .slick-slide>div {
   /* padding: 0 15px; */
-  margin: 0 15px;
+  /* margin: 0 15px; */
 }
 
 /* @media (max-width: 575px) {
