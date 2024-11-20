@@ -1,9 +1,9 @@
 import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
 import { Key } from "react";
 import { useParams } from "react-router-dom";
-import React from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import EpisodeAccordion from "./episode-acordion/episode-acordion";
+import MediaWrapper from "../media-wrapper/media-wrapper";
 
 const queryClient = new QueryClient();
 
@@ -24,7 +24,6 @@ interface AccordionProps {
 }
 
 function GetMovieDetails() {
-    const [, setModalShow] = React.useState(false);
 
     const { showType, id } = useParams();
 
@@ -62,7 +61,7 @@ function GetMovieDetails() {
     const title = data.title ? data.title : data.name
     const titleLastWord = (data.title ? data.title : data.name).split(' ').pop()
 
-    console.log(data.seasons);
+    const mediaURL = "https://vidsrc.xyz/embed/" + showType + "/" + id
 
 
     return (
@@ -125,7 +124,11 @@ function GetMovieDetails() {
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a> */}
-                            <a onClick={() => setModalShow(true)} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                            {/* <a onClick={() => <MediaWrapper MediaURL={mediaURL} />} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                                <i className="fa fa-play"></i>
+                                Watch now
+                            </a> */}
+                            <a onClick={() => <MediaWrapper MediaURL={mediaURL} />} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a>

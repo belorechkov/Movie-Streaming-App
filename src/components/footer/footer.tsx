@@ -36,7 +36,7 @@ export default function Footer() {
             <div className="footer-copyright">
                 <div className="footer-copyright-box">
                     <div className="copyright fw-5">
-                        Copyright © 2024. All Rights Reserved By <Link to="/" className="hightlight">StreamIt</Link>
+                        Copyright © 2024. All Rights Reserved By <Link to="/" className="hightlight">WatchBG</Link>
                     </div>
                     <div className="copyright fw-5">
                         This site does not store any files on our server, we are only linked to the media which is hosted on 3rd party services.
