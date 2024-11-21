@@ -1,4 +1,3 @@
-import MediaWrapper from "../media-wrapper/media-wrapper";
 import PopularMovies from "../popular-movies/popular-movies";
 import PopularShows from "../popular-shows/popular-shows";
 import Trending from "../trending/trending";
@@ -42,7 +41,6 @@ export default function Home() {
                     </Link>
                 </div>
             </section>
-            <MediaWrapper MediaURL="123" />
             <Trending />
             <PopularMovies />
             <PopularShows />

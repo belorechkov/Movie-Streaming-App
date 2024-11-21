@@ -1,5 +1,5 @@
 import { QueryClient, QueryClientProvider, useQuery } from "@tanstack/react-query";
-import { Key } from "react";
+import { Key, useState } from "react";
 import { useParams } from "react-router-dom";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import EpisodeAccordion from "./episode-acordion/episode-acordion";
@@ -24,6 +24,12 @@ interface AccordionProps {
 }
 
 function GetMovieDetails() {
+
+    const [ShowMedia, setShowMedia] = useState(false);
+
+    const handleWatchMedia = () => {
+        setShowMedia(prevState => !prevState); 
+    };
 
     const { showType, id } = useParams();
 
@@ -61,11 +67,14 @@ function GetMovieDetails() {
     const title = data.title ? data.title : data.name
     const titleLastWord = (data.title ? data.title : data.name).split(' ').pop()
 
-    const mediaURL = "https://vidsrc.xyz/embed/" + showType + "/" + id
+    // const mediaURL = "https://vidsrc.xyz/embed/" + showType + "/" + id
 
 
     return (
-        <div>
+        <div onClick={ShowMedia && handleWatchMedia}>
+             {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id}/>}
+             {/* {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} onClose={() => handleWatchMedia}/>} */}
+
             <section id="movie-banner">
                 <div className="movie-banner-box">
                     <div className="image thumb-image">
@@ -128,7 +137,11 @@ function GetMovieDetails() {
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a> */}
-                            <a onClick={() => <MediaWrapper MediaURL={mediaURL} />} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                            {/* <a onClick={handleShowWrapper} className="btn rounded outline prime bg-dark fw-7 trailer-source">
+                                <i className="fa fa-play"></i>
+                                Watch now
+                            </a> */}
+                            <a onClick={handleWatchMedia} className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now
                             </a>
@@ -136,7 +149,6 @@ function GetMovieDetails() {
                     </div>
                 </div>
             </section>
-
             {(showType === "tv") ?
                 <section id="movie-detail">
                     <div className="movie-detail-box">

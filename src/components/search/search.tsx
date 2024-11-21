@@ -7,8 +7,6 @@ export default function Search({ showSearch, setShowSearch }: { showSearch: unkn
 
     const hideShowSearch = (e: MouseEvent<HTMLDivElement, globalThis.MouseEvent>) => {
         if ((e.target as HTMLInputElement).id === 'search') {
-            console.log('search');
-
             setShowSearch(prevState => !prevState)
         }
     }
