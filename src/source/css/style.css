@@ -1630,6 +1630,7 @@ p.desc.dark {
   padding: 20px 0 17px;
   border-bottom: 1px solid #292b37;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 @media (max-width: 575px) {
@@ -4954,4 +4955,8 @@ p.desc.dark {
   font-weight: 700;
   margin-bottom: 1rem;
   color: #e4d804;
+}
+
+#close-media-wrapper{
+  cursor: pointer;
 }

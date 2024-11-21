@@ -28,7 +28,7 @@ function GetMovieDetails() {
     const [ShowMedia, setShowMedia] = useState(false);
 
     const handleWatchMedia = () => {
-        setShowMedia(prevState => !prevState); 
+        setShowMedia(prevState => !prevState);
     };
 
     const { showType, id } = useParams();
@@ -71,11 +71,12 @@ function GetMovieDetails() {
 
 
     return (
-        <div onClick={ShowMedia && handleWatchMedia}>
-             {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id}/>}
-             {/* {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} onClose={() => handleWatchMedia}/>} */}
+        <div >
+            {/* <div onClick={ShowMedia && handleWatchMedia} id="close-media-wrapper"> */}
+            {/* {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} onClose={() => handleWatchMedia}/>} */}
 
-            <section id="movie-banner">
+            <section id="movie-banner" onClick={ShowMedia && handleWatchMedia}>
+                {ShowMedia && <MediaWrapper MediaURL={"http://localhost:5173/details/tv/34634"} />}
                 <div className="movie-banner-box">
                     <div className="image thumb-image">
                         <img className="" src={"https://image.tmdb.org/t/p/w500//" + data.poster_path} alt="movie" />
