@@ -28,7 +28,7 @@ function GetMovieDetails() {
     const [ShowMedia, setShowMedia] = useState(false);
 
     const handleWatchMedia = () => {
-        setShowMedia(prevState => !prevState); 
+        setShowMedia(prevState => !prevState);
     };
 
     const { showType, id } = useParams();
@@ -71,10 +71,10 @@ function GetMovieDetails() {
 
 
     return (
-        <div onClick={ShowMedia && handleWatchMedia}>
+        <div onClick={() => ShowMedia && handleWatchMedia()}>
             {/* {ShowMedia && <button className="close-wrapper-button"></button>} */}
-             {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id}/>}
-             {/* {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} onClose={() => handleWatchMedia}/>} */}
+            {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} />}
+            {/* {ShowMedia && <MediaWrapper MediaURL={"https://vidsrc.xyz/embed/" + showType + "/" + id} onClose={() => handleWatchMedia}/>} */}
 
             <section id="movie-banner">
                 <div className="movie-banner-box">
