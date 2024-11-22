@@ -4960,3 +4960,43 @@ p.desc.dark {
 #close-media-wrapper{
   cursor: pointer;
 }
+
+@media (max-width: 575px) {
+  .close-wrapper-button {
+    right: 50%;
+    top: 20%;
+  }
+}
+
+
+.close-wrapper-button {
+  position: absolute;
+  right: 0;
+  top: 20%;
+  width: 20px;
+  height: 0;
+  background-color: transparent;
+  &:before, &:after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    background-color: #fff;
+    width: 100%;
+    height: 2px;
+    transition: height .2s ease-out;
+    border-radius: 3px;
+  }
+  &:before {
+    transform: translate(-50%, -50%) rotate(45deg);
+  }
+  &:after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+  }
+  &:hover, &:focus {
+    &:before, &:after {
+      height: 4px;
+    }
+  }
+}
