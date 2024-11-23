@@ -38,8 +38,8 @@ function App() {
 
 export default App
 
-// TODO: Implement Show episode choosing on the Details page
-// TODO: Implement Search component
+// TODO: Implement open watch now from carousel and movie component since it currently only works from details component
+// TODO: fix bug when loading detais from movis and then tv. Could log the path that the app is using since it might be wrong for some reason 
 // TODO: Implement show sorting and pagination on the Movies and Shows components
 
 

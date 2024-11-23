@@ -78,9 +78,9 @@ function GetMovieDetails() {
 
             <section id="movie-banner">
                 <div className="movie-banner-box">
-                    <div className="image thumb-image">
-                        <img className="" src={"https://image.tmdb.org/t/p/w500//" + data.poster_path} alt="movie" />
-                        <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="play-btn trailer-source">
+                    <div className="image thumb-image" onClick={handleWatchMedia}>
+                        <img  src={"https://image.tmdb.org/t/p/w500//" + data.poster_path} alt="movie" />
+                        <a  className="play-btn trailer-source">
                             <img src="../../src/assets/images/play_icon.png" alt="play_icon" />
                         </a>
                     </div>

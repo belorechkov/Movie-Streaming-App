@@ -49,7 +49,7 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                         <div className="search-btn">
                             <a onClick={handleShowSearch}><i className="fa fa-search"></i></a>
                         </div>
-                        <div className="language-btn">
+                        {/* <div className="language-btn">
                             <Link to="#"><i className="fa fa-globe"></i></Link>
                             <select name="language" id="language" title="Select language" defaultValue={'en'}>
                                 <option value="en">en</option>
@@ -61,7 +61,7 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                                 <option value="tu">tr</option>
                                 <option value="tu">al</option>
                             </select>
-                        </div>
+                        </div> */}
                         {/* <Link to="#" className="btn rounded outline bg-dark medium fw-7 space signin-btn">
                             Sign In
                         </Link> */}
@@ -75,7 +75,7 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
             <aside id="navbar-mobile" className={mobile ? 'show' : ''}>
                 <div className="navbar-header">
                     <Link to="/" className="logo">
-                        <img src="./src/assets/images/logo.png" alt="Movflx" />
+                        <img src="/src/assets/images/logo.png" alt="Movflx" />
                     </Link>
                     <div className="close-btn" onClick={toggleMobileMenu}><i className="fa fa-times"></i></div>
                 </div>

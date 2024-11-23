@@ -1464,6 +1464,8 @@ p.desc.dark {
   line-height: 0;
   max-width: 900px;
   margin: 0 auto;
+  transition: all 0.3s ease;
+
 }
 
 .trailer-wrapper::before {
@@ -2344,6 +2346,7 @@ p.desc.dark {
   padding: 0 15px;
   position: relative;
   transition: all 0.25s ease;
+  cursor: pointer;
 }
 
 #movie-banner .movie-banner-box .thumb-image a.play-btn {
@@ -2353,6 +2356,12 @@ p.desc.dark {
   transform: translate(-50%, -50%);
   width: 120px;
   height: 120px;
+  transition: all 0.3s ease;
+}
+
+#movie-banner .movie-banner-box .thumb-image a.play-btn:hover {
+  width: 130px;
+  height: 130px;
 }
 
 #movie-banner .movie-banner-box .content {
@@ -4961,20 +4970,15 @@ p.desc.dark {
   cursor: pointer;
 }
 
-@media (max-width: 575px) {
-  .close-wrapper-button {
-    right: 50%;
-    top: 20%;
-  }
-}
+
 
 
 .close-wrapper-button {
   position: absolute;
   right: 0;
-  top: 20%;
-  width: 20px;
-  height: 0;
+  top: 15%;
+  width: 22px;
+  height: 22px;
   background-color: transparent;
   &:before, &:after {
     content: "";
@@ -4999,4 +5003,20 @@ p.desc.dark {
       height: 4px;
     }
   }
+}
+
+@media (max-width: 620px) {
+  .close-wrapper-button {
+    right: 45%;
+    top: 25%;
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media (min-width: 620px) and (max-width: 1200px) {
+  .close-wrapper-button {
+    right: 45%;
+    top: 15%;
+}
 }
