@@ -23,7 +23,7 @@ export default function Movies() {
 }
 
 function GetMovies() {
-    const [listType,] = useState("popular")
+    const [listType, setListType] = useState("popular")
 
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -76,15 +76,15 @@ function GetMovies() {
                     <div className="heading control">
                         <h3 className="title center">Top Rated Movies</h3>
                         <ul className="control-action">
-                            {/* <li className={(listType === "latest") ? "active" : ""}>
-                                <a onClick={() => setListType("latest")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
+                            <li className={(listType === "now_playing") ? "active" : ""}>
+                                <a onClick={() => setListType("now_playing")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
                             <li className={(listType === "popular") ? "active" : ""}>
-                                <a onClick={() => setListType("trending")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">popular</a>
+                                <a onClick={() => setListType("popular")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">popular</a>
                             </li>
                             <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
-                            </li> */}
+                            </li>
                             {/* <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
                                     className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>

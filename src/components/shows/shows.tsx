@@ -25,7 +25,7 @@ export default function Shows() {
 
 function GetShows() {
 
-    const [listType,] = useState("popular")
+    const [listType, setListType] = useState("popular")
 
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -75,7 +75,7 @@ function GetShows() {
                     <div className="heading control">
                         <h3 className="title center">Top Rated Shows</h3>
                         <ul className="control-action">
-                            {/* <li className={(listType === "on_the_air") ? "active" : ""}>
+                            <li className={(listType === "on_the_air") ? "active" : ""}>
                                 <a onClick={() => setListType("on_the_air")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
                             </li>
                             <li className={(listType === "popular") ? "active" : ""}>
@@ -83,7 +83,7 @@ function GetShows() {
                             </li>
                             <li className={(listType === "top_rated") ? "active" : ""}>
                                 <a onClick={() => setListType("top_rated")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Top-Rated</a>
-                            </li> */}
+                            </li>
                             {/* <li className="action-item">
                                 <select name="type-movie" title="Choose type movie"
                                     className="btn fw-6 dropdownable rounded outline-dark small bg-gray lowercase" defaultValue='English'>
