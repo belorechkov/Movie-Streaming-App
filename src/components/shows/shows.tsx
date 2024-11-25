@@ -6,6 +6,7 @@ import "slick-carousel/slick/slick-theme.css";
 import MovieCard from "../movie-card/movie-card"
 import { useState } from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
+import Pagination from "../pagination/pagination";
 
 const queryClient = new QueryClient();
 
@@ -26,7 +27,9 @@ function GetShows() {
 
     const [listType,] = useState("popular")
 
-    const fetchURL = "https://api.themoviedb.org/3/tv/" + listType + "?language=en-US&page=1"
+    const [currentPage, setCurrentPage] = useState(1);
+
+    const fetchURL = `https://api.themoviedb.org/3/tv/${listType}?language=en-US&page=${currentPage}`
 
     const options = {
         method: "GET",
@@ -36,12 +39,16 @@ function GetShows() {
         },
     };
     const { isPending, error, data } = useQuery({
-        queryKey: ["shows"],
+        queryKey: ["shows", fetchURL],
         queryFn: async () => {
             const response = await fetch(fetchURL, options);
             return await response.json();
         },
     });
+
+    const handlePageChange = (page: number) => {
+        setCurrentPage(page);
+      };
 
     if (isPending) return <CarouselLoader />;
 
@@ -105,23 +112,11 @@ function GetShows() {
                             ))}
                         </ul>
                     </div>
-                    {/* <ul className="pagination">
-                        <li className="pagination-item active">
-                            <a href="#" className="fw-6">1</a>
-                        </li>
-                        <li className="pagination-item">
-                            <a href="#" className="fw-6">2</a>
-                        </li>
-                        <li className="pagination-item">
-                            <a href="#" className="fw-6">3</a>
-                        </li>
-                        <li className="pagination-item">
-                            <a href="#" className="fw-6">4</a>
-                        </li>
-                        <li className="pagination-item">
-                            <a href="#" className="fw-6">Next</a>
-                        </li>
-                    </ul> */}
+                    <Pagination
+                    currentPage={currentPage}
+                    totalPages={data.total_pages}
+                    onPageChange={handlePageChange}
+                    />
                 </div>
             </section>
 

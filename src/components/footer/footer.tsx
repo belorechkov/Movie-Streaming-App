@@ -24,10 +24,10 @@ export default function Footer() {
                                     <Link to="/saved" className="fw-7">Saved</Link>
                                 </li>
                             </ul>
-                            <div className="search-box">
+                            {/* <div className="search-box">
                                 <input type="text" placeholder="Find Favorite Movie" />
                                 <Link to="/" className="search"><i className="fa fa-search"></i></Link>
-                            </div>
+                            </div> */}
                         </div>
                     </nav>
                 </div>

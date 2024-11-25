@@ -26,7 +26,7 @@ function FetchSearch() {
 
     const { query } = useParams();
 
-    const fetchURL = "https://api.themoviedb.org/3/search/multi?query=" + query + "&include_adult=false&language=en-US&page=1"
+    const fetchURL = `https://api.themoviedb.org/3/search/multi?query=${query}&include_adult=false&language=en-US&page=1`
     const options = {
         method: "GET",
         headers: {

@@ -1441,20 +1441,29 @@ p.desc.dark {
   }
 }
 
-.pagination-item.active a,
-.pagination-item:hover a {
+.pagination-item.active button,
+.pagination-item:hover button {
   background-color: #e4d804;
   border: 1.5px solid #e4d804;
   color: #1e1b29;
 }
 
-.pagination-item a {
+.pagination-item.disabled button {
+  background-color: transparent;
+  color: #bcbcbc;
+  opacity: .4;
+  pointer-events: none;
+
+}
+
+.pagination-item button {
   font-size: 14px;
   padding: 10px 20px;
   line-height: 21px;
   background-color: transparent;
   border: 1.5px solid #cdcaca;
   color: #bcbcbc;
+  transition: all .5s;
 }
 
 .trailer-wrapper {
