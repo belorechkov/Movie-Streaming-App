@@ -50,15 +50,15 @@ export default function CarouselCard({
                         </span>
                     </li>
                     <li className="hover-item">
-                        <a href={"https://vidsrc.xyz/embed/" + isMovie + "/" + id} target="_blank" className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source">
+                        <Link to={"/details" + "/" + isMovie + "/" + id} className="btn rounded outline  fw-6 medium bg-accent hover-accent trailer-source">
                             Watch now
-                        </a>
+                        </Link>
                     </li>
-                    <li className="hover-item">
+                    {/* <li className="hover-item">
                         <Link to={"/details" + "/" + isMovie + "/" + id} className="btn rounded outline fw-6 medium bg-dark">
                             Details
                         </Link>
-                    </li>
+                    </li> */}
                 </ul>
             </div>
             <div className="movie-meta card-meta">
