@@ -1392,6 +1392,7 @@ p.desc.dark {
   flex-wrap: wrap;
   row-gap: 32px;
   column-gap: 30px;
+  padding: 0px 15px;
 }
 
 @media (max-width: 1600px) {
@@ -2230,7 +2231,7 @@ p.desc.dark {
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  padding: 295px 0 273px 0;
+  padding: 195px 0 173px 0;
 }
 
 #banner .banner-box {
@@ -2536,7 +2537,7 @@ p.desc.dark {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  padding: 270px 0 240px;
+  padding: 160px 0 140px;
 }
 
 #breadcrumb .title {
