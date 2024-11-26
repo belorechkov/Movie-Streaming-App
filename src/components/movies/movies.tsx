@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../movie-card/movie-card"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import Pagination from "../pagination/pagination";
 
@@ -25,7 +25,28 @@ export default function Movies() {
 function GetMovies() {
     const [listType, setListType] = useState("popular")
 
+    let pageHeading = ""
+
+    switch (listType) {
+        case "now_playing":
+            pageHeading = "Latest Shows";
+            break;
+        case "popular":
+            pageHeading = "Popular Shows";
+            break;
+        case "top_rated":
+            pageHeading = "Top Rated Shows";
+            break;
+        default:
+            pageHeading = "Shows";
+            break;
+    }
+
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [listType])
 
     const fetchURL = `https://api.themoviedb.org/3/movie/${listType}?language=en-US&page=${currentPage}`
 
@@ -46,7 +67,7 @@ function GetMovies() {
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-      };
+    };
 
     if (isPending) return <CarouselLoader />;
 
@@ -74,7 +95,7 @@ function GetMovies() {
                         {/* <p className="sub-title hightlight">Online streaming</p> */}
                     </div>
                     <div className="heading control">
-                        <h3 className="title center">Top Rated Movies</h3>
+                        <h3 className="title center">{pageHeading}:</h3>
                         <ul className="control-action">
                             <li className={(listType === "now_playing") ? "active" : ""}>
                                 <a onClick={() => setListType("now_playing")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
@@ -114,9 +135,9 @@ function GetMovies() {
                         </ul>
                     </div>
                     <Pagination
-                    currentPage={currentPage}
-                    totalPages={data.total_pages}
-                    onPageChange={handlePageChange}
+                        currentPage={currentPage}
+                        totalPages={data.total_pages}
+                        onPageChange={handlePageChange}
                     />
                 </div>
             </section>

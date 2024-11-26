@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../movie-card/movie-card"
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import Pagination from "../pagination/pagination";
 
@@ -27,7 +27,28 @@ function GetShows() {
 
     const [listType, setListType] = useState("popular")
 
+    let pageHeading = ""
+
+    switch (listType) {
+        case "on_the_air":
+            pageHeading = "Latest Shows";
+            break;
+        case "popular":
+            pageHeading = "Popular Shows";
+            break;
+        case "top_rated":
+            pageHeading = "Top Rated Shows";
+            break;
+        default:
+            pageHeading = "Shows";
+            break;
+    }
+
     const [currentPage, setCurrentPage] = useState(1);
+
+    useEffect(() => {
+        setCurrentPage(1)
+    }, [listType])
 
     const fetchURL = `https://api.themoviedb.org/3/tv/${listType}?language=en-US&page=${currentPage}`
 
@@ -48,7 +69,7 @@ function GetShows() {
 
     const handlePageChange = (page: number) => {
         setCurrentPage(page);
-      };
+    };
 
     if (isPending) return <CarouselLoader />;
 
@@ -73,7 +94,7 @@ function GetShows() {
             <section id="new-release" className="suggestion">
                 <div className="suggestion-box">
                     <div className="heading control">
-                        <h3 className="title center">Top Rated Shows</h3>
+                        <h3 className="title center">{pageHeading}:</h3>
                         <ul className="control-action">
                             <li className={(listType === "on_the_air") ? "active" : ""}>
                                 <a onClick={() => setListType("on_the_air")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
@@ -113,9 +134,9 @@ function GetShows() {
                         </ul>
                     </div>
                     <Pagination
-                    currentPage={currentPage}
-                    totalPages={data.total_pages}
-                    onPageChange={handlePageChange}
+                        currentPage={currentPage}
+                        totalPages={data.total_pages}
+                        onPageChange={handlePageChange}
                     />
                 </div>
             </section>
