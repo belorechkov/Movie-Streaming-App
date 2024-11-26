@@ -1220,10 +1220,43 @@ p.desc.dark {
   transform: translateY(20px);
 }
 
+@-webkit-keyframes pulse {
+  0% {
+    -webkit-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+  }
+  70% {
+      -webkit-box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+  }
+  100% {
+      -webkit-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+  }
+}
+@keyframes pulse {
+  0% {
+    -moz-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+    box-shadow: 0 0 0 0 rgba(228, 216, 4, 0.4);
+  }
+  70% {
+      -moz-box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+      box-shadow: 0 0 0 10px rgba(228, 216, 4, 0);
+  }
+  100% {
+      -moz-box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+      box-shadow: 0 0 0 0 rgba(228, 216, 4, 0);
+  }
+}
+
 .grid-card .card.hoverable .image .hover-box .btn {
   min-width: 140px;
   text-transform: capitalize;
+  animation: pulse 1s ease-in-out infinite ;
 }
+с
+
+.grid-card .card.hoverable .image .hover-box .btn:hover {
+  animation: none;
+}
+с
 
 .grid-card .card.hoverable .image::before {
   content: "";

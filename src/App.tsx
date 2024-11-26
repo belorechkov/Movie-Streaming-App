@@ -11,6 +11,7 @@ import Footer from './components/footer/footer'
 import React from 'react'
 import Details from './components/details/details'
 import SearchResults from './components/search/search-results/search-results'
+import Favorites from './components/favorites/favorites'
 
 function App() {
   const [showSearch, setShowSearch] = React.useState(false as boolean)
@@ -29,6 +30,7 @@ function App() {
           <Route path='/shows' element={<Shows />} />
           <Route path='/details/:showType/:id' element={<Details />} />
           <Route path='/search/:query' element={<SearchResults />} />
+          <Route path='/favorites' element={<Favorites />} />
         </Routes>
         <Footer />
       </BrowserRouter>
