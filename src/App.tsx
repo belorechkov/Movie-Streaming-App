@@ -11,6 +11,7 @@ import Footer from './components/footer/footer'
 import React from 'react'
 import Details from './components/details/details'
 import SearchResults from './components/search/search-results/search-results'
+import Saved from './components/saved/saved'
 
 function App() {
   const [showSearch, setShowSearch] = React.useState(false as boolean)
