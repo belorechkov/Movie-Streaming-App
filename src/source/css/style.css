@@ -1545,7 +1545,7 @@ p.desc.dark {
 .prime-box {
   display: flex;
   align-items: center;
-  max-width: 375px;
+  max-width:285px;
   padding: 25px;
   background-color: #242c38;
   flex-wrap: wrap;
@@ -5062,4 +5062,21 @@ p.desc.dark {
     right: 45%;
     top: 15%;
 }
+}
+
+.favorite-button {
+  background-color: transparent;
+}
+
+.favorite-details-icon {
+  font-size: 35px;
+}
+
+.search-icon {
+  cursor: pointer;
+  font-size: 17px;
+}
+
+.search-icon:hover {
+  color: #e4d804
 }

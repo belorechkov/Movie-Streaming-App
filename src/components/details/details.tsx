@@ -79,8 +79,8 @@ function GetMovieDetails() {
             <section id="movie-banner">
                 <div className="movie-banner-box">
                     <div className="image thumb-image" onClick={handleWatchMedia}>
-                        <img  src={"https://image.tmdb.org/t/p/w500//" + data.poster_path} alt="movie" />
-                        <a  className="play-btn trailer-source">
+                        <img src={"https://image.tmdb.org/t/p/w500//" + data.poster_path} alt="movie" />
+                        <a className="play-btn trailer-source">
                             <img src="../../src/assets/images/play_icon.png" alt="play_icon" />
                         </a>
                     </div>
@@ -124,24 +124,10 @@ function GetMovieDetails() {
                         <p className="desc fw-5">{data.overview}</p>
                         <div className="action prime-box">
                             <div className="share fw-5 prime-item">
-                                {/* <i className="fa fa-share-alt title"></i>
-                                <a href="#" className="sub-title">
-                                    Share
-                                </a> */}
-                                <p className="sub-title hightlight text-left">Ready to stream</p>
+                                {/* <p className="sub-title hightlight text-left">Ready to stream</p> */}
+                                <button className="hightlight favorite-button" title="Favorite"><i className="fa fa-heart-o favorite-details-icon" aria-hidden="true"></i></button>
+                                {/* <button className="hightlight favorite-button" title="Favorite"><i className="fa fa-heart favorite-details-icon" aria-hidden="true"></i></button> */}
                             </div>
-                            {/* <a href={"https://vidsrc.xyz/embed/" + showType + "/" + id} target="_blank" className="btn rounded outline prime bg-dark fw-7 trailer-source">
-                                <i className="fa fa-play"></i>
-                                Watch now
-                            </a> */}
-                            {/* <a onClick={() => <MediaWrapper MediaURL={mediaURL} />} href="" className="btn rounded outline prime bg-dark fw-7 trailer-source">
-                                <i className="fa fa-play"></i>
-                                Watch now
-                            </a> */}
-                            {/* <a onClick={handleShowWrapper} className="btn rounded outline prime bg-dark fw-7 trailer-source">
-                                <i className="fa fa-play"></i>
-                                Watch now
-                            </a> */}
                             <a onClick={handleWatchMedia} className="btn rounded outline prime bg-dark fw-7 trailer-source">
                                 <i className="fa fa-play"></i>
                                 Watch now

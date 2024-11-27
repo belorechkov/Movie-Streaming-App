@@ -21,7 +21,7 @@ export default function Footer() {
                                     <Link to="/shows" className="fw-7">Tv shows</Link>
                                 </li>
                                 <li className="navbar-item footer">
-                                    <Link to="/favorites" className="fw-7">Favorites</Link>
+                                    <Link to="/saved" className="fw-7">Saved</Link>
                                 </li>
                             </ul>
                             {/* <div className="search-box">

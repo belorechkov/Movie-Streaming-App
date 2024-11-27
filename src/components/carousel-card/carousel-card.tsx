@@ -59,6 +59,9 @@ export default function CarouselCard({
                             Details
                         </Link>
                     </li> */}
+                    {/* <li className="hover-item">
+                        <button className="hightlight favorite-button" title="Favorite"><i className="fa fa-heart-o favorite-details-icon" aria-hidden="true"></i></button>
+                    </li> */}
                 </ul>
             </div>
             <div className="movie-meta card-meta">

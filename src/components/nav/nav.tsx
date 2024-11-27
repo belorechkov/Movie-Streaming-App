@@ -43,11 +43,11 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                         <li className="navbar-item" data-active="tv-show"><Link to="/">Home</Link></li>
                         <li className="navbar-item" data-active="tv-show"><Link to="/movies">Movies</Link></li>
                         <li className="navbar-item" data-active="tv-show"><Link to="/shows">Tv Shows</Link></li>
-                        <li className="navbar-item" data-active="favorites"><Link to="/favorites">Favorites</Link></li>
+                        <li className="navbar-item" data-active="saved"><Link to="/saved">Favorites</Link></li>
                     </ul>
                     <div className="navbar-action">
                         <div className="search-btn">
-                            <a onClick={handleShowSearch}><i className="fa fa-search"></i></a>
+                            <a onClick={handleShowSearch}><i className="fa fa-search search-icon"></i></a>
                         </div>
                         {/* <div className="language-btn">
                             <Link to="#"><i className="fa fa-globe"></i></Link>
@@ -90,8 +90,8 @@ export default function Nav({ setShowSearch }: { setShowSearch: React.Dispatch<R
                         <Link className="fw-5" to="/shows">Tv Shows</Link>
                     </li>
 
-                    <li className="navbar-body-item parent" data-active="favorites">
-                        <Link className="fw-5" to="/favorites">Favorites</Link>
+                    <li className="navbar-body-item parent" data-active="saved">
+                        <Link className="fw-5" to="/saved">Favorites</Link>
                     </li>
                     {/* <li className="navbar-body-item parent" data-active="account">
                         <Link className="fw-5" to="/">Account</Link>

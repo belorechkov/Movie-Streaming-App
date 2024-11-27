@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom"
 
 
-export default function Favorites() {
+export default function Saved() {
 
-    
+
     return (
         <div>
             <section id="breadcrumb">
-                <h2 className="title fw-7">
-                    Your Favorites <span className="hightlight"></span>
+                <h2 className="title fw-7">Saved<span className="hightlight"></span>
                 </h2>
                 <ul className="breadcumb-box">
                     <li className="breadcumb-item">
@@ -26,7 +25,7 @@ export default function Favorites() {
                         {/* <p className="sub-title hightlight">Online streaming</p> */}
                     </div>
                     <div className="heading control">
-                        <h3 className="title center">Your favorites</h3>
+                        <h3 className="title center">Your Saves:</h3>
                         <ul className="control-action">
                             {/* <li className={(listType === "latest") ? "active" : ""}>
                                 <a onClick={() => setListType("latest")} className="btn fw-6 rounded outline-dark small bg-gray lowercase">Latest</a>
