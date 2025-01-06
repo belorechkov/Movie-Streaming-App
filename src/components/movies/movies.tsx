@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../movie-card/movie-card"
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import Pagination from "../pagination/pagination";
 
@@ -29,16 +29,16 @@ function GetMovies() {
 
     switch (listType) {
         case "now_playing":
-            pageHeading = "Latest Shows";
+            pageHeading = "Latest Movies";
             break;
         case "popular":
-            pageHeading = "Popular Shows";
+            pageHeading = "Popular Movies";
             break;
         case "top_rated":
-            pageHeading = "Top Rated Shows";
+            pageHeading = "Top Rated Movies";
             break;
         default:
-            pageHeading = "Shows";
+            pageHeading = "Movies";
             break;
     }
 
@@ -65,7 +65,10 @@ function GetMovies() {
         },
     });
 
+    const pageTopRef = useRef() as MutableRefObject<HTMLLIElement>;
+
     const handlePageChange = (page: number) => {
+        pageTopRef.current.scrollIntoView({behavior: 'smooth'});
         setCurrentPage(page);
     };
 
@@ -83,13 +86,13 @@ function GetMovies() {
                     <li className="breadcumb-item">
                         <Link to="/" className="fw-6">Home</Link>
                     </li>
-                    <li className="breadcumb-item disable">
+                    <li  ref={pageTopRef}className="breadcumb-item disable">
                         <Link to="/movies" className="fw-6">Movies</Link>
                     </li>
                 </ul>
             </section>
 
-            <section id="new-release" className="suggestion">
+            <section  id="new-release" className="suggestion">
                 <div className="suggestion-box">
                     <div className="heading">
                         {/* <p className="sub-title hightlight">Online streaming</p> */}

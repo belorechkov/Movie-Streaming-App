@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import MovieCard from "../movie-card/movie-card"
-import { useEffect, useState } from "react";
+import { MutableRefObject, useEffect, useRef, useState } from "react";
 import CarouselLoader from "../carousel/carousel-loader/carousel-loader";
 import Pagination from "../pagination/pagination";
 
@@ -67,8 +67,13 @@ function GetShows() {
         },
     });
 
+    const pageTopRef = useRef() as MutableRefObject<HTMLLIElement>;
+
+
     const handlePageChange = (page: number) => {
+        pageTopRef.current.scrollIntoView({behavior: 'smooth'});
         setCurrentPage(page);
+
     };
 
     if (isPending) return <CarouselLoader />;
@@ -85,7 +90,7 @@ function GetShows() {
                     <li className="breadcumb-item">
                         <Link to="/" className="fw-6">Home</Link>
                     </li>
-                    <li className="breadcumb-item disable">
+                    <li ref={pageTopRef} className="breadcumb-item disable">
                         <Link to="/shows" className="fw-6">Shows</Link>
                     </li>
                 </ul>

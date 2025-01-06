@@ -47,6 +47,10 @@ export default function Saved() {
                             </li> */}
                         </ul>
                     </div>
+                    <div className="empty-movie">
+            <img src="/src/assets/images/empty.svg" alt="Empty movie" />
+            <h3 className="title">You have not saved anything yet!</h3>
+        </div>
                     <div className="movie-wrapper">
                         <ul className="movie-box grid-layout grid-card">
                             {/* {data.results.length > 0 ? (
