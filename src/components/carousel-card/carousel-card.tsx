@@ -38,9 +38,9 @@ export default function CarouselCard({
     return (
         <li className="movie-item card hoverable" style={{ maxWidth: "100%" }}>
             <div className="movie-image image rounded">
-                <a href="movie-detail.html">
+                <Link to={"/details" + "/" + isMovie + "/" + id}>
                     <img src={"https://image.tmdb.org/t/p/w500//" + poster_path} alt="movie" />
-                </a>
+                    </Link>
                 <ul className="hover-box">
                     <li className="hover-item star-box ">
                         <span className="star rated rating-box">
